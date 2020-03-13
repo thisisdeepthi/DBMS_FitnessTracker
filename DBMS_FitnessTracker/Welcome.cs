@@ -15,6 +15,7 @@ namespace DBMS_FitnessTracker
         public Welcome()
         {
             InitializeComponent();
+            MessageBox.Show("Hiii"); 
         }
 
         private void label1_Click(object sender, EventArgs e)
