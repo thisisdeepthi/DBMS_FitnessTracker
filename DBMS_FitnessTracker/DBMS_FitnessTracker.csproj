@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActivityMaster.resx">
+      <DependentUpon>ActivityMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActLog.resx">
       <DependentUpon>ActLog.cs</DependentUpon>
     </EmbeddedResource>
