@@ -16,6 +16,8 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+
+                Console.writeline("HIII");
             }
             base.Dispose(disposing);
         }
