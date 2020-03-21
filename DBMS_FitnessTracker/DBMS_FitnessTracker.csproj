@@ -64,6 +64,12 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActivityMaster.resx">
+      <DependentUpon>ActivityMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActLog.resx">
       <DependentUpon>ActLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
