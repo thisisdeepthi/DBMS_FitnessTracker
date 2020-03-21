@@ -17,9 +17,12 @@ namespace DBMS_FitnessTracker
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserPage Form1 = new UserPage();
+            Form1.Show();
         }
     }
 }
