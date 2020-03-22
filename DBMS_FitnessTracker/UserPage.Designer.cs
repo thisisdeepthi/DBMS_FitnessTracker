@@ -30,39 +30,39 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Save = new System.Windows.Forms.Button();
-            this.Updatenew = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.agebox = new System.Windows.Forms.NumericUpDown();
+            this.name = new System.Windows.Forms.TextBox();
+            this.female = new System.Windows.Forms.RadioButton();
+            this.male = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.male = new System.Windows.Forms.RadioButton();
-            this.female = new System.Windows.Forms.RadioButton();
-            this.name = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.email = new System.Windows.Forms.TextBox();
             this.phone = new System.Windows.Forms.TextBox();
-            this.category = new System.Windows.Forms.TextBox();
-            this.age = new System.Windows.Forms.NumericUpDown();
-            this.wt = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.category = new System.Windows.Forms.ComboBox();
             this.ht = new System.Windows.Forms.NumericUpDown();
+            this.wt = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Save = new System.Windows.Forms.Button();
+            this.Updatenew = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agebox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.age)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ht)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wt)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.age);
+            this.groupBox1.Controls.Add(this.agebox);
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.Controls.Add(this.female);
             this.groupBox1.Controls.Add(this.male);
@@ -76,84 +76,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic details";
             // 
-            // groupBox2
+            // agebox
             // 
-            this.groupBox2.Controls.Add(this.email);
-            this.groupBox2.Controls.Add(this.phone);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(78, 324);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(348, 224);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Contact Details";
+            this.agebox.Location = new System.Drawing.Point(173, 121);
+            this.agebox.Name = "agebox";
+            this.agebox.Size = new System.Drawing.Size(63, 26);
+            this.agebox.TabIndex = 9;
+            this.agebox.Value = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
             // 
-            // groupBox3
+            // name
             // 
-            this.groupBox3.Controls.Add(this.ht);
-            this.groupBox3.Controls.Add(this.wt);
-            this.groupBox3.Controls.Add(this.category);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(474, 50);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(349, 245);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Health Data";
+            this.name.Location = new System.Drawing.Point(173, 70);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(100, 26);
+            this.name.TabIndex = 8;
             // 
-            // Save
+            // female
             // 
-            this.Save.Location = new System.Drawing.Point(564, 383);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(140, 29);
-            this.Save.TabIndex = 2;
-            this.Save.Text = "Save";
-            this.toolTip1.SetToolTip(this.Save, "For new entries SAVE");
-            this.Save.UseVisualStyleBackColor = true;
+            this.female.AutoSize = true;
+            this.female.Location = new System.Drawing.Point(173, 204);
+            this.female.Name = "female";
+            this.female.Size = new System.Drawing.Size(87, 24);
+            this.female.TabIndex = 7;
+            this.female.TabStop = true;
+            this.female.Text = "Female";
+            this.female.UseVisualStyleBackColor = true;
             // 
-            // Updatenew
+            // male
             // 
-            this.Updatenew.Location = new System.Drawing.Point(564, 429);
-            this.Updatenew.Name = "Updatenew";
-            this.Updatenew.Size = new System.Drawing.Size(140, 30);
-            this.Updatenew.TabIndex = 3;
-            this.Updatenew.Text = "Update";
-            this.toolTip1.SetToolTip(this.Updatenew, "For exisiting entries , Change the data");
-            this.Updatenew.UseVisualStyleBackColor = true;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Tag = "Save for a new user";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Height";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Weight";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lifestyle";
+            this.male.AutoSize = true;
+            this.male.Location = new System.Drawing.Point(173, 174);
+            this.male.Name = "male";
+            this.male.Size = new System.Drawing.Size(68, 24);
+            this.male.TabIndex = 6;
+            this.male.TabStop = true;
+            this.male.Text = "Male";
+            this.male.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -182,6 +144,33 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Name";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.email);
+            this.groupBox2.Controls.Add(this.phone);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Location = new System.Drawing.Point(78, 324);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(348, 224);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Contact Details";
+            // 
+            // email
+            // 
+            this.email.Location = new System.Drawing.Point(155, 105);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(144, 26);
+            this.email.TabIndex = 11;
+            // 
+            // phone
+            // 
+            this.phone.Location = new System.Drawing.Point(155, 60);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(100, 26);
+            this.phone.TabIndex = 10;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -200,62 +189,50 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Phone no";
             // 
-            // male
+            // groupBox3
             // 
-            this.male.AutoSize = true;
-            this.male.Location = new System.Drawing.Point(173, 174);
-            this.male.Name = "male";
-            this.male.Size = new System.Drawing.Size(68, 24);
-            this.male.TabIndex = 6;
-            this.male.TabStop = true;
-            this.male.Text = "Male";
-            this.male.UseVisualStyleBackColor = true;
-            // 
-            // female
-            // 
-            this.female.AutoSize = true;
-            this.female.Location = new System.Drawing.Point(173, 204);
-            this.female.Name = "female";
-            this.female.Size = new System.Drawing.Size(87, 24);
-            this.female.TabIndex = 7;
-            this.female.TabStop = true;
-            this.female.Text = "Female";
-            this.female.UseVisualStyleBackColor = true;
-            // 
-            // name
-            // 
-            this.name.Location = new System.Drawing.Point(173, 70);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(100, 26);
-            this.name.TabIndex = 8;
-            // 
-            // email
-            // 
-            this.email.Location = new System.Drawing.Point(155, 105);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(144, 26);
-            this.email.TabIndex = 11;
-            // 
-            // phone
-            // 
-            this.phone.Location = new System.Drawing.Point(155, 60);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(100, 26);
-            this.phone.TabIndex = 10;
+            this.groupBox3.Controls.Add(this.category);
+            this.groupBox3.Controls.Add(this.ht);
+            this.groupBox3.Controls.Add(this.wt);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Location = new System.Drawing.Point(474, 50);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(349, 245);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Health Data";
             // 
             // category
             // 
-            this.category.Location = new System.Drawing.Point(186, 170);
+            this.category.FormattingEnabled = true;
+            this.category.Items.AddRange(new object[] {
+            "Low physical Activity",
+            "High physical Activity",
+            "Moderate physical Activiy"});
+            this.category.Location = new System.Drawing.Point(186, 176);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(100, 26);
-            this.category.TabIndex = 12;
+            this.category.Size = new System.Drawing.Size(121, 28);
+            this.category.TabIndex = 15;
             // 
-            // age
+            // ht
             // 
-            this.age.Location = new System.Drawing.Point(173, 121);
-            this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(63, 26);
-            this.age.TabIndex = 9;
+            this.ht.Location = new System.Drawing.Point(186, 71);
+            this.ht.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.ht.Name = "ht";
+            this.ht.Size = new System.Drawing.Size(63, 26);
+            this.ht.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.ht, "in cm");
+            this.ht.Value = new decimal(new int[] {
+            160,
+            0,
+            0,
+            0});
             // 
             // wt
             // 
@@ -264,14 +241,63 @@
             this.wt.Size = new System.Drawing.Size(63, 26);
             this.wt.TabIndex = 13;
             this.toolTip1.SetToolTip(this.wt, "in kilograms");
+            this.wt.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
-            // ht
+            // label3
             // 
-            this.ht.Location = new System.Drawing.Point(186, 71);
-            this.ht.Name = "ht";
-            this.ht.Size = new System.Drawing.Size(63, 26);
-            this.ht.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.ht, "in cm");
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(90, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Lifestyle";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Weight";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(90, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Height";
+            // 
+            // Save
+            // 
+            this.Save.Location = new System.Drawing.Point(564, 383);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(140, 29);
+            this.Save.TabIndex = 2;
+            this.Save.Text = "Save";
+            this.toolTip1.SetToolTip(this.Save, "For new entries SAVE");
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // Updatenew
+            // 
+            this.Updatenew.Location = new System.Drawing.Point(564, 429);
+            this.Updatenew.Name = "Updatenew";
+            this.Updatenew.Size = new System.Drawing.Size(140, 30);
+            this.Updatenew.TabIndex = 3;
+            this.Updatenew.Text = "Update";
+            this.toolTip1.SetToolTip(this.Updatenew, "For exisiting entries , Change the data");
+            this.Updatenew.UseVisualStyleBackColor = true;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Tag = "Save for a new user";
             // 
             // UserPage
             // 
@@ -284,13 +310,13 @@
             this.Name = "UserPage";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agebox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.age)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ht)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,7 +339,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown age;
+        private System.Windows.Forms.NumericUpDown agebox;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.RadioButton female;
         private System.Windows.Forms.RadioButton male;
@@ -321,6 +347,6 @@
         private System.Windows.Forms.TextBox phone;
         private System.Windows.Forms.NumericUpDown ht;
         private System.Windows.Forms.NumericUpDown wt;
-        private System.Windows.Forms.TextBox category;
+        private System.Windows.Forms.ComboBox category;
     }
 }
