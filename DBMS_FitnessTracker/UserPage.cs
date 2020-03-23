@@ -86,5 +86,10 @@ namespace DBMS_FitnessTracker
             con1.Close();
 
         }
+
+        private void UserPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
