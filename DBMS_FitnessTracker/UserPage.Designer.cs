@@ -294,6 +294,7 @@
             this.Updatenew.Text = "Update";
             this.toolTip1.SetToolTip(this.Updatenew, "For exisiting entries , Change the data");
             this.Updatenew.UseVisualStyleBackColor = true;
+            this.Updatenew.Click += new System.EventHandler(this.Updatenew_Click);
             // 
             // toolTip1
             // 

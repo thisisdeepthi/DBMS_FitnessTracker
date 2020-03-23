@@ -9,9 +9,9 @@ namespace DBMS_FitnessTracker
 
     public partial class UserPage : Form
     {
-        public static string constr = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=swetha2000";
+        public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
-
+        public static string res ;
         public UserPage()
         {
             InitializeComponent();
@@ -19,33 +19,7 @@ namespace DBMS_FitnessTracker
 
         public int findUID()
         {
-            try
-            {
-                con1.Open();
-                string Query = "select max(userid)+1 from user";
-                MySqlCommand cmd = new MySqlCommand(Query, con1);
-                MySqlDataReader dr = cmd.ExecuteReader();
-               
-                if(dr.Read())
-                {
-                    con1.Close();
-                    return dr.GetUInt16(0);
-
-                }
-               
-
-
-            }
-            catch(Exception er)
-            {
-                con1.Close();
-                return 1;
-            }
-
-            con1.Close();
-            return 1;
-
-
+            return 0;
         }
         private void Save_Click(object sender, System.EventArgs e)
         {
@@ -61,8 +35,8 @@ namespace DBMS_FitnessTracker
             string age = agebox.Value.ToString();
             string height = ht.Value.ToString();
             string weight = wt.Value.ToString();
-           
-            string Query = "insert into user (userid,name,age,gender,phoneNo,email,height,weight,category) values ("+findUID()+",'" + name.Text + "'," + age + ",'" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
+            
+            string Query = "insert into user (userid,name,age,gender,phoneNo,email,height,weight,category) values ("+res+",'" + name.Text + "'," + age + ",'" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
 
 
@@ -72,19 +46,26 @@ namespace DBMS_FitnessTracker
                 con1.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully");
-
+                con1.Close();
+                this.Close();
 
             }
             catch (MySqlException error)
             {
                 MessageBox.Show(error.Message);
             }
-            catch (Exception er)
+            catch (SystemException er)
             {
                 MessageBox.Show(er.Message);
             }
             con1.Close();
+            
 
+        }
+
+        private void Updatenew_Click(object sender, EventArgs e)
+        {
+            findUID();
         }
     }
 }
