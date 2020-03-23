@@ -258,6 +258,7 @@
             this.Save.Text = "Save";
             this.toolTip1.SetToolTip(this.Save, "For new entries SAVE");
             this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Updatenew
             // 

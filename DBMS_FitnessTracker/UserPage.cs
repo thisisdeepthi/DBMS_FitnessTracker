@@ -18,5 +18,10 @@ namespace DBMS_FitnessTracker
         {
 
         }
+
+        private void Save_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
