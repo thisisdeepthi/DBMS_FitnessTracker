@@ -10,27 +10,24 @@ using System.Windows.Forms;
 
 namespace DBMS_FitnessTracker
 {
-    public partial class Welcome : Form
+    public partial class standard_diet_log : Form
     {
-        public Welcome()
+        public standard_diet_log()
         {
             InitializeComponent();
         }
 
-        
-
-        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UserPage Form1 = new UserPage();
-            Form1.Show();
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void standard_diet_log_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void dietChartToolStripMenuItem_Click(object sender, EventArgs e)
+        private void richTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox11_TextChanged(object sender, EventArgs e)
         {
 
         }

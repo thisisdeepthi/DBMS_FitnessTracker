@@ -86,5 +86,30 @@ namespace DBMS_FitnessTracker
             con1.Close();
 
         }
+
+        private void agebox_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wt_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ht_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
