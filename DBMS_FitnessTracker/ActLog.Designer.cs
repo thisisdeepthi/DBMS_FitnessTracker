@@ -38,15 +38,16 @@
             this.workhigh = new System.Windows.Forms.RadioButton();
             this.worklow = new System.Windows.Forms.RadioButton();
             this.actrem = new System.Windows.Forms.Label();
-            this.actrema = new System.Windows.Forms.DomainUpDown();
             this.actsub = new System.Windows.Forms.Button();
             this.actiname = new System.Windows.Forms.ComboBox();
+            this.actrem1 = new System.Windows.Forms.TextBox();
+            this.mustdo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // history
             // 
             this.history.AutoSize = true;
-            this.history.Location = new System.Drawing.Point(12, 9);
+            this.history.Location = new System.Drawing.Point(9, 186);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(68, 13);
             this.history.TabIndex = 0;
@@ -54,7 +55,7 @@
             // 
             // txthistory
             // 
-            this.txthistory.Location = new System.Drawing.Point(12, 50);
+            this.txthistory.Location = new System.Drawing.Point(12, 224);
             this.txthistory.Name = "txthistory";
             this.txthistory.Size = new System.Drawing.Size(100, 20);
             this.txthistory.TabIndex = 1;
@@ -134,16 +135,6 @@
             this.actrem.TabIndex = 10;
             this.actrem.Text = "Remark";
             // 
-            // actrema
-            // 
-            this.actrema.InterceptArrowKeys = false;
-            this.actrema.Items.Add("Unusual");
-            this.actrema.Items.Add("Normal Acitvity");
-            this.actrema.Location = new System.Drawing.Point(356, 180);
-            this.actrema.Name = "actrema";
-            this.actrema.Size = new System.Drawing.Size(120, 20);
-            this.actrema.TabIndex = 11;
-            // 
             // actsub
             // 
             this.actsub.Location = new System.Drawing.Point(334, 221);
@@ -163,15 +154,34 @@
             this.actiname.TabIndex = 13;
             this.actiname.SelectedIndexChanged += new System.EventHandler(this.FillCombo_SelectedIndexChanged);
             // 
+            // actrem1
+            // 
+            this.actrem1.Location = new System.Drawing.Point(355, 179);
+            this.actrem1.Name = "actrem1";
+            this.actrem1.Size = new System.Drawing.Size(120, 20);
+            this.actrem1.TabIndex = 14;
+            this.actrem1.Text = "Say normal or unusual";
+            // 
+            // mustdo
+            // 
+            this.mustdo.AutoSize = true;
+            this.mustdo.Location = new System.Drawing.Point(9, 18);
+            this.mustdo.Name = "mustdo";
+            this.mustdo.Size = new System.Drawing.Size(47, 13);
+            this.mustdo.TabIndex = 15;
+            this.mustdo.Text = "Must Do";
+            this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
+            // 
             // ActLog
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.mustdo);
+            this.Controls.Add(this.actrem1);
             this.Controls.Add(this.actiname);
             this.Controls.Add(this.actsub);
-            this.Controls.Add(this.actrema);
             this.Controls.Add(this.actrem);
             this.Controls.Add(this.worklow);
             this.Controls.Add(this.workhigh);
@@ -203,8 +213,9 @@
         private System.Windows.Forms.RadioButton workhigh;
         private System.Windows.Forms.RadioButton worklow;
         private System.Windows.Forms.Label actrem;
-        private System.Windows.Forms.DomainUpDown actrema;
         private System.Windows.Forms.Button actsub;
         private System.Windows.Forms.ComboBox actiname;
+        private System.Windows.Forms.TextBox actrem1;
+        private System.Windows.Forms.Label mustdo;
     }
 }

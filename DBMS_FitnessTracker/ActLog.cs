@@ -19,6 +19,8 @@ namespace DBMS_FitnessTracker
         {
             InitializeComponent();
             fillcombo();
+            check();
+            
         }
         void fillcombo()
         {
@@ -41,6 +43,20 @@ namespace DBMS_FitnessTracker
             }
                 
         }
+        void check()
+        {
+            CheckBox box;
+            for (int i = 0; i < 3; i++)
+            {
+                box = new CheckBox();
+                box.Tag = i.ToString();
+                box.Text = "a";
+                box.AutoSize = true;
+                box.Location = new Point(50, i * 25);//vertical
+                box.Padding = new Padding(3); //box.Location = new Point(i * 50, 10); //horizontal
+                this.Controls.Add(box);
+            }
+        }
 
         private void ActLog_Load(object sender, EventArgs e)
         {
@@ -60,6 +76,16 @@ namespace DBMS_FitnessTracker
         private void FillCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void mustdo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dolist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

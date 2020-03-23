@@ -29,9 +29,6 @@ namespace DBMS_FitnessTracker
         private void activityChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ActLog actlog = new ActLog();
-            actlog.TopLevel = false;
-            this.Controls.Clear();
-            this.Controls.Add(actlog);
             actlog.Show();
 
         }
