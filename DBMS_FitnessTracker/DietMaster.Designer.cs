@@ -28,57 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.EXISTING = new System.Windows.Forms.GroupBox();
+            this.ADDNEW = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.NO = new System.Windows.Forms.RadioButton();
+            this.YES = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.Save = new System.Windows.Forms.Button();
+            this.ADDNEW.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 484);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "EXISTING";
+            this.EXISTING.Location = new System.Drawing.Point(12, 12);
+            this.EXISTING.Name = "groupBox1";
+            this.EXISTING.Size = new System.Drawing.Size(418, 484);
+            this.EXISTING.TabIndex = 0;
+            this.EXISTING.TabStop = false;
+            this.EXISTING.Text = "EXISTING";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(464, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 484);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ADD NEW";
+            this.ADDNEW.Controls.Add(this.textBox7);
+            this.ADDNEW.Controls.Add(this.textBox6);
+            this.ADDNEW.Controls.Add(this.textBox5);
+            this.ADDNEW.Controls.Add(this.textBox4);
+            this.ADDNEW.Controls.Add(this.textBox3);
+            this.ADDNEW.Controls.Add(this.listBox1);
+            this.ADDNEW.Controls.Add(this.NO);
+            this.ADDNEW.Controls.Add(this.YES);
+            this.ADDNEW.Controls.Add(this.textBox2);
+            this.ADDNEW.Controls.Add(this.textBox1);
+            this.ADDNEW.Controls.Add(this.label4);
+            this.ADDNEW.Controls.Add(this.label3);
+            this.ADDNEW.Controls.Add(this.label2);
+            this.ADDNEW.Controls.Add(this.label1);
+            this.ADDNEW.Location = new System.Drawing.Point(464, 12);
+            this.ADDNEW.Name = "groupBox2";
+            this.ADDNEW.Size = new System.Drawing.Size(392, 484);
+            this.ADDNEW.TabIndex = 1;
+            this.ADDNEW.TabStop = false;
+            this.ADDNEW.Text = "ADD NEW";
             // 
             // textBox7
             // 
@@ -143,26 +143,26 @@
             // 
             // radioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(179, 448);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(50, 21);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "NO";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.NO.AutoSize = true;
+            this.NO.Location = new System.Drawing.Point(179, 448);
+            this.NO.Name = "radioButton2";
+            this.NO.Size = new System.Drawing.Size(50, 21);
+            this.NO.TabIndex = 7;
+            this.NO.TabStop = true;
+            this.NO.Text = "NO";
+            this.NO.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(179, 413);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 21);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "YES";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.YES.AutoSize = true;
+            this.YES.Location = new System.Drawing.Point(179, 413);
+            this.YES.Name = "radioButton1";
+            this.YES.Size = new System.Drawing.Size(56, 21);
+            this.YES.TabIndex = 6;
+            this.YES.TabStop = true;
+            this.YES.Text = "YES";
+            this.YES.UseVisualStyleBackColor = true;
+            this.YES.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox2
             // 
@@ -220,12 +220,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(923, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Save.Location = new System.Drawing.Point(923, 219);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 2;
+            this.Save.Text = "SAVE";
+            this.Save.UseVisualStyleBackColor = true;
             // 
             // DietMaster
             // 
@@ -233,31 +233,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1048, 517);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.ADDNEW);
+            this.Controls.Add(this.EXISTING);
             this.Name = "DietMaster";
             this.Text = "DietMaster";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.ADDNEW.ResumeLayout(false);
+            this.ADDNEW.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox EXISTING;
+        private System.Windows.Forms.GroupBox ADDNEW;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton NO;
+        private System.Windows.Forms.RadioButton YES;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;

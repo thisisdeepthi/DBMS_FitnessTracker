@@ -12,6 +12,9 @@ namespace DBMS_FitnessTracker
 {
     public partial class DietLog : Form
     {
+        public static string constr = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=ishu@psg17";
+        MySqlConnection con1 = new MySqlConnection(constr);
+
         public DietLog()
         {
             InitializeComponent();
@@ -55,6 +58,21 @@ namespace DBMS_FitnessTracker
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
