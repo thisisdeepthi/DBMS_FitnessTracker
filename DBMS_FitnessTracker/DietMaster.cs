@@ -63,8 +63,8 @@ namespace DBMS_FitnessTracker
             string fat = textBox6.ToString();
             string others = textBox7.ToString();
 
-            string Query="insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "')"
-
+            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "');";
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
