@@ -111,6 +111,9 @@
     <EmbeddedResource Include="CumulativeReport.resx">
       <DependentUpon>CumulativeReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DietLog.resx">
+      <DependentUpon>DietLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
