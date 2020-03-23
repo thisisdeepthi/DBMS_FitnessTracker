@@ -9,6 +9,14 @@ namespace DBMS_FitnessTracker
             InitializeComponent();
         }
 
+        private void UserPage_Load(object sender, System.EventArgs e)
+        {
 
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
