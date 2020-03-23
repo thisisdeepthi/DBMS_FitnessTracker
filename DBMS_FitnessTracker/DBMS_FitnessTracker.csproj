@@ -35,10 +35,11 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.18\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>C:\Users\sweth\Downloads\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -75,12 +76,6 @@
     <Compile Include="DietLog.Designer.cs">
       <DependentUpon>DietLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="DietMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DietMaster.Designer.cs">
-      <DependentUpon>DietMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="DReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,8 +111,11 @@
     <EmbeddedResource Include="CumulativeReport.resx">
       <DependentUpon>CumulativeReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DietMaster.resx">
-      <DependentUpon>DietMaster.cs</DependentUpon>
+    <EmbeddedResource Include="DietLog.resx">
+      <DependentUpon>DietLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
@@ -134,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
