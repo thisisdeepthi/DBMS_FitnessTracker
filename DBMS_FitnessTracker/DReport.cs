@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace DBMS_FitnessTracker
 {
-    public partial class Welcome : Form
+    public partial class DReport : Form
     {
-        public Welcome()
+        public DReport()
         {
             InitializeComponent();
-        }
-
-        
-
-        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UserPage Form1 = new UserPage();
-            Form1.Show();
         }
     }
 }
