@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DBMS_FitnessTracker
 {
-    public partial class ActivityMaster : Form
+    public partial class DReport : Form
     {
-        public ActivityMaster()
+        public DReport()
         {
             InitializeComponent();
-        }
-
-        private void ActivityMaster_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

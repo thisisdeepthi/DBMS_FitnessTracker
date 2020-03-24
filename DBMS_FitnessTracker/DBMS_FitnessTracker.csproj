@@ -34,6 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,11 +60,47 @@
     <Compile Include="ActLog.Designer.cs">
       <DependentUpon>ActLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="CumulativeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CumulativeReport.Designer.cs">
+      <DependentUpon>CumulativeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DietLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DietLog.Designer.cs">
+      <DependentUpon>DietLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DReport.Designer.cs">
+      <DependentUpon>DReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="standard diet log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="standard diet log.Designer.cs">
+      <DependentUpon>standard diet log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -72,8 +110,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActivityMaster.resx">
+      <DependentUpon>ActivityMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActLog.resx">
       <DependentUpon>ActLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CumulativeReport.resx">
+      <DependentUpon>CumulativeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DietLog.resx">
+      <DependentUpon>DietLog.cs</DependentUpon>
+    </EmbeddedResource>
+
+
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="standard diet log.resx">
+      <DependentUpon>standard diet log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -87,6 +145,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
