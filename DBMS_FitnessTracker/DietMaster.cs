@@ -13,7 +13,7 @@ namespace DBMS_FitnessTracker
     public partial class DietMaster : Form
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
-        MySqlConnection con1 = new MySqlConnection(constr);
+        //MySqlConnection con1 = new MySqlConnection(constr);
         public static string res;
         public DietMaster()
         {
@@ -73,6 +73,11 @@ namespace DBMS_FitnessTracker
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DietMaster_Load(object sender, EventArgs e)
         {
 
         }

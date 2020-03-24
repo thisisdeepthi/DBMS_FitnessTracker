@@ -115,10 +115,10 @@ namespace DBMS_FitnessTracker
 
         }
 
-        private void agebox_ValueChanged(object sender, EventArgs e)
+      /*  private void agebox_ValueChanged(object sender, EventArgs e)
         {
 
-        }
+        }*/
 
         private void category_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -131,6 +131,11 @@ namespace DBMS_FitnessTracker
         }
 
         private void ht_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       private void UserPage_Load_1(object sender, EventArgs e)
         {
 
         }
