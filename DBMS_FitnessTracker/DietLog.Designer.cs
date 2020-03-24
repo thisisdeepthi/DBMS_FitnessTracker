@@ -1,4 +1,4 @@
-﻿namespace DBMS_FitnessTracker
+namespace DBMS_FitnessTracker
 {
     partial class DietLog
     {
