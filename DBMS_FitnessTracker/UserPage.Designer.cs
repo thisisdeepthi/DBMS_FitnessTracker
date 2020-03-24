@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.agebox = new System.Windows.Forms.NumericUpDown();
             this.name = new System.Windows.Forms.TextBox();
             this.female = new System.Windows.Forms.RadioButton();
             this.male = new System.Windows.Forms.RadioButton();
@@ -52,8 +51,8 @@
             this.Save = new System.Windows.Forms.Button();
             this.Updatenew = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.agebox = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agebox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ht)).BeginInit();
@@ -75,18 +74,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Basic details";
-            // 
-            // agebox
-            // 
-            this.agebox.Location = new System.Drawing.Point(173, 121);
-            this.agebox.Name = "agebox";
-            this.agebox.Size = new System.Drawing.Size(63, 26);
-            this.agebox.TabIndex = 9;
-            this.agebox.Value = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
             // 
             // name
             // 
@@ -300,6 +287,15 @@
             // 
             this.toolTip1.Tag = "Save for a new user";
             // 
+            // agebox
+            // 
+            this.agebox.Location = new System.Drawing.Point(183, 121);
+            this.agebox.Name = "agebox";
+            this.agebox.Size = new System.Drawing.Size(159, 26);
+            this.agebox.TabIndex = 9;
+            this.agebox.Value = new System.DateTime(2000, 6, 16, 0, 0, 0, 0);
+            this.agebox.ValueChanged += new System.EventHandler(this.agebox_ValueChanged);
+            // 
             // UserPage
             // 
             this.ClientSize = new System.Drawing.Size(1000, 582);
@@ -311,7 +307,6 @@
             this.Name = "UserPage";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agebox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -340,7 +335,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown agebox;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.RadioButton female;
         private System.Windows.Forms.RadioButton male;
@@ -349,5 +343,6 @@
         private System.Windows.Forms.NumericUpDown ht;
         private System.Windows.Forms.NumericUpDown wt;
         private System.Windows.Forms.ComboBox category;
+        private System.Windows.Forms.DateTimePicker agebox;
     }
 }

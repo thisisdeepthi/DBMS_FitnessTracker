@@ -16,5 +16,10 @@ namespace DBMS_FitnessTracker
         {
             InitializeComponent();
         }
+
+        private void ActivityMaster_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

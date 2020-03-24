@@ -7,18 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 namespace DBMS_FitnessTracker
 {
-    public partial class DietLog : Form
+    public partial class Form1 : Form
     {
-        public static string constr = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=ishu@psg17";
-        MySqlConnection con1 = new MySqlConnection(constr);
-
-        public DietLog()
+        public Form1()
         {
             InitializeComponent();
         }
-
-       
+    }
 }
