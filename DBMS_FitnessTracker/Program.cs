@@ -8,6 +8,8 @@ namespace DBMS_FitnessTracker
 {
     static class Program
     {
+        public static string userName = "";
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,4 +21,5 @@ namespace DBMS_FitnessTracker
             Application.Run(new Welcome());
         }
     }
+   
 }
