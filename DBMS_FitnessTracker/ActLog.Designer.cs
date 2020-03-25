@@ -31,7 +31,6 @@
             this.history = new System.Windows.Forms.Label();
             this.actname = new System.Windows.Forms.Label();
             this.actdur = new System.Windows.Forms.Label();
-            this.actdur1 = new System.Windows.Forms.DomainUpDown();
             this.actwork = new System.Windows.Forms.Label();
             this.workhigh = new System.Windows.Forms.RadioButton();
             this.worklow = new System.Windows.Forms.RadioButton();
@@ -42,6 +41,8 @@
             this.mustdo = new System.Windows.Forms.Label();
             this.addnew = new System.Windows.Forms.GroupBox();
             this.acthis = new System.Windows.Forms.CheckedListBox();
+            this.actdur1 = new System.Windows.Forms.TextBox();
+            this.addnew.SuspendLayout();
             this.SuspendLayout();
             // 
             // history
@@ -68,17 +69,9 @@
             this.actdur.AutoSize = true;
             this.actdur.Location = new System.Drawing.Point(249, 91);
             this.actdur.Name = "actdur";
-            this.actdur.Size = new System.Drawing.Size(47, 13);
+            this.actdur.Size = new System.Drawing.Size(88, 13);
             this.actdur.TabIndex = 5;
-            this.actdur.Text = "Duration";
-            // 
-            // actdur1
-            // 
-            this.actdur1.Location = new System.Drawing.Point(356, 91);
-            this.actdur1.Name = "actdur1";
-            this.actdur1.Size = new System.Drawing.Size(120, 20);
-            this.actdur1.TabIndex = 6;
-            this.actdur1.Text = "select duration";
+            this.actdur.Text = "Duration (in mins)";
             // 
             // actwork
             // 
@@ -159,6 +152,7 @@
             // 
             // addnew
             // 
+            this.addnew.Controls.Add(this.actdur1);
             this.addnew.Location = new System.Drawing.Point(209, 19);
             this.addnew.Name = "addnew";
             this.addnew.Size = new System.Drawing.Size(300, 261);
@@ -173,6 +167,13 @@
             this.acthis.Name = "acthis";
             this.acthis.Size = new System.Drawing.Size(120, 94);
             this.acthis.TabIndex = 17;
+            // 
+            // actdur1
+            // 
+            this.actdur1.Location = new System.Drawing.Point(146, 72);
+            this.actdur1.Name = "actdur1";
+            this.actdur1.Size = new System.Drawing.Size(100, 20);
+            this.actdur1.TabIndex = 0;
             // 
             // ActLog
             // 
@@ -189,7 +190,6 @@
             this.Controls.Add(this.worklow);
             this.Controls.Add(this.workhigh);
             this.Controls.Add(this.actwork);
-            this.Controls.Add(this.actdur1);
             this.Controls.Add(this.actdur);
             this.Controls.Add(this.actname);
             this.Controls.Add(this.history);
@@ -198,6 +198,8 @@
             this.Name = "ActLog";
             this.Text = "ActLog";
             this.Load += new System.EventHandler(this.ActLog_Load);
+            this.addnew.ResumeLayout(false);
+            this.addnew.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +210,6 @@
         private System.Windows.Forms.Label history;
         private System.Windows.Forms.Label actname;
         private System.Windows.Forms.Label actdur;
-        private System.Windows.Forms.DomainUpDown actdur1;
         private System.Windows.Forms.Label actwork;
         private System.Windows.Forms.RadioButton workhigh;
         private System.Windows.Forms.RadioButton worklow;
@@ -219,5 +220,6 @@
         private System.Windows.Forms.Label mustdo;
         private System.Windows.Forms.GroupBox addnew;
         private System.Windows.Forms.CheckedListBox acthis;
+        private System.Windows.Forms.TextBox actdur1;
     }
 }

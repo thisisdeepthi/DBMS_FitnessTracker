@@ -110,6 +110,11 @@ namespace DBMS_FitnessTracker
            // MessageBox.Show(dob);
         }
 
+        private void UserPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void UserPage_Load(object sender, EventArgs e)
         {
 

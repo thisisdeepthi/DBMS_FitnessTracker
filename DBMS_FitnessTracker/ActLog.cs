@@ -73,7 +73,6 @@ namespace DBMS_FitnessTracker
             condatabase.Close();               
         }
        
-
         private void ActLog_Load(object sender, EventArgs e)
         {
 
@@ -86,8 +85,97 @@ namespace DBMS_FitnessTracker
 
         private void actsub_Click(object sender, EventArgs e)
         {
-           // condatabase.Open();
-            //string Query="insert into activitychart"
+            int logno=0,id=0,CaloriesBurnt=0;
+            string intensity=" ";
+            //To insert the logno into the activitychart table
+            condatabase.Open();
+            string Query = "select max(LogNo)+1 as Log from activitychart;";
+            MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+            MySqlDataReader myReader;
+            try
+            {
+                //condatabase.Open();
+                myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    logno = myReader.GetInt32("Log");
+                }
+                
+            }
+            catch(Exception er)
+            { 
+                MessageBox.Show(er.Message);
+            }
+            condatabase.Close();
+            condatabase.Open();
+            //To get activity id from master table using activity name
+            Query ="select * from activitymaster where activityname='"+actiname.Text +"' ;";
+           cmd = new MySqlCommand(Query, condatabase);
+            try
+            {
+                // 
+                // 
+                myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    id = myReader.GetInt32("ActivityID");
+                }
+               // condatabase.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
+            //To get type of activity(high or low)
+            if (workhigh.Checked && worklow.Checked)
+                MessageBox.Show("Select Anyone type");
+            else if (workhigh.Checked)
+                intensity = workhigh.Text;
+            else if (worklow.Checked)
+                intensity = worklow.Text;
+            else
+                MessageBox.Show("Please Enter the Woerkout Intensity");
+            //To calculate the Calories burnt
+            string duration = "";
+            duration=actdur1.Text;
+            int x = Convert.ToInt32(duration);
+            
+            condatabase.Open();
+            Query = "select CaloriesPerMin from activitymaster where activityname='"+actname.Text+"';";
+            try
+            {
+                //condatabase.Open();
+                cmd = new MySqlCommand(Query, condatabase);
+                myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    CaloriesBurnt =  myReader.GetInt32("CaloriesPerMin");
+                }
+                int temp = x * CaloriesBurnt;
+              // MessageBox.Show("Result is" + temp +" "+x +" "+CaloriesBurnt);
+                //condatabase.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
+            condatabase.Open();
+            Query ="insert into activitychart(LogNo,Adate,AID,Duration,Type,CaloriesBurnt,UserID,Remark) values("+ logno + ",CURDATE(),"+id+","+x+",'"+intensity+"',"+CaloriesBurnt+",1,'"+actrem1.Text+"');";
+            try
+            {
+               // condatabase.Open();
+                cmd = new MySqlCommand(Query,condatabase);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Saved Successfully");
+                //condatabase.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
         }
 
         private void FillCombo_SelectedIndexChanged(object sender, EventArgs e)
