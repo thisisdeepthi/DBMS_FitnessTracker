@@ -107,7 +107,7 @@ namespace DBMS_FitnessTracker
         private void agebox_ValueChanged(object sender, EventArgs e)
         {
             dob = agebox.Value.ToString("yyyy-MM-dd");
-            MessageBox.Show(dob);
+           // MessageBox.Show(dob);
         }
 
         private void UserPage_Load(object sender, EventArgs e)
@@ -115,6 +115,6 @@ namespace DBMS_FitnessTracker
 
         }
 
-       
+
     }
 }
