@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DBMS_FitnessTracker
 {
     public partial class DietMaster : Form
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
-        
+        MySqlConnection con1 = new MySqlConnection(constr);
         public static string res;
         public DietMaster()
         {
@@ -63,8 +64,8 @@ namespace DBMS_FitnessTracker
             string fat = textBox6.ToString();
             string others = textBox7.ToString();
 
-            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "')";
-
+            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "');";
+            
         }
 
         private void label4_Click(object sender, EventArgs e)

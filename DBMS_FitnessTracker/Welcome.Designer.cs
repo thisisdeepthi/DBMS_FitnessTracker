@@ -83,7 +83,7 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
@@ -93,7 +93,7 @@
             this.activityGoalsToolStripMenuItem,
             this.dietGoalsToolStripMenuItem});
             this.goalsToolStripMenuItem.Name = "goalsToolStripMenuItem";
-            this.goalsToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.goalsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goalsToolStripMenuItem.Text = "Goals";
             // 
             // activityGoalsToolStripMenuItem
@@ -120,13 +120,13 @@
             // dietToolStripMenuItem
             // 
             this.dietToolStripMenuItem.Name = "dietToolStripMenuItem";
-            this.dietToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.dietToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dietToolStripMenuItem.Text = "Diet ";
             // 
             // activityToolStripMenuItem
             // 
             this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
-            this.activityToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.activityToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.activityToolStripMenuItem.Text = "Activity";
             // 
             // dailyLogToolStripMenuItem
@@ -143,13 +143,13 @@
             this.activityChartToolStripMenuItem.Name = "activityChartToolStripMenuItem";
             this.activityChartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.activityChartToolStripMenuItem.Text = "Activity chart ";
+            this.activityChartToolStripMenuItem.Click += new System.EventHandler(this.activityChartToolStripMenuItem_Click);
             // 
             // dietChartToolStripMenuItem
             // 
             this.dietChartToolStripMenuItem.Name = "dietChartToolStripMenuItem";
             this.dietChartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dietChartToolStripMenuItem.Text = "Diet Chart ";
-            this.dietChartToolStripMenuItem.Click += new System.EventHandler(this.dietChartToolStripMenuItem_Click_1);
             // 
             // reportToolStripMenuItem
             // 
@@ -183,7 +183,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Welcome";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Welcome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
