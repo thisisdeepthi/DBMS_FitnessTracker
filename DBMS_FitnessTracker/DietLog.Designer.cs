@@ -90,7 +90,7 @@ namespace DBMS_FitnessTracker
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(41, 22);
             this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+           // this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // textBox2
             // 
@@ -98,7 +98,7 @@ namespace DBMS_FitnessTracker
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(128, 22);
             this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+           // this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // groupBox1
             // 
@@ -123,7 +123,7 @@ namespace DBMS_FitnessTracker
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 28;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           // this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -133,7 +133,7 @@ namespace DBMS_FitnessTracker
             this.button1.TabIndex = 27;
             this.button1.Text = "calculate";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -170,7 +170,7 @@ namespace DBMS_FitnessTracker
             this.label7.Size = new System.Drawing.Size(57, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "calories";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            //this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -197,7 +197,7 @@ namespace DBMS_FitnessTracker
             this.richTextBox1.Size = new System.Drawing.Size(40, 26);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            //this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox3
             // 
@@ -286,7 +286,7 @@ namespace DBMS_FitnessTracker
             this.Controls.Add(this.groupBox1);
             this.Name = "DietLog";
             this.Text = "DietLog";
-            this.Load += new System.EventHandler(this.DietLog_Load);
+           // this.Load += new System.EventHandler(this.DietLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

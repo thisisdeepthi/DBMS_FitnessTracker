@@ -19,6 +19,6 @@ namespace DBMS_FitnessTracker
         {
             InitializeComponent();
         }
-
+    }
        
 }
