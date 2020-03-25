@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -71,6 +75,12 @@
     </Compile>
     <Compile Include="DietLog.Designer.cs">
       <DependentUpon>DietLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DietMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DietMaster.Designer.cs">
+      <DependentUpon>DietMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="DReport.cs">
       <SubType>Form</SubType>
@@ -121,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DietLog.resx">
       <DependentUpon>DietLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DietMaster.resx">
+      <DependentUpon>DietMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

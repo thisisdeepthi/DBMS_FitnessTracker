@@ -294,7 +294,7 @@
             this.agebox.Size = new System.Drawing.Size(159, 26);
             this.agebox.TabIndex = 9;
             this.agebox.Value = new System.DateTime(2000, 6, 16, 0, 0, 0, 0);
-            this.agebox.ValueChanged += new System.EventHandler(this.agebox_ValueChanged);
+        //    this.agebox.ValueChanged += new System.EventHandler(this.agebox_ValueChanged);
             // 
             // UserPage
             // 

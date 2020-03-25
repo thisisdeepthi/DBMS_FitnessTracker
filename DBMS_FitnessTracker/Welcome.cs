@@ -40,16 +40,15 @@ namespace DBMS_FitnessTracker
 
         private void dietChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DietLog form1 = new DietLog();
-            form1.Show();
+           
         }
 
-        private void activityChartToolStripMenuItem_Click(object sender, EventArgs e)
+       /* private void activityChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ActLog form1 = new ActLog();
             form1.Show();
         }
-
+        */
         private void dietToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DietMaster form1 = new DietMaster();
@@ -60,6 +59,17 @@ namespace DBMS_FitnessTracker
         {
             ActivityMaster form2 = new ActivityMaster();
             form2.Show();
+        }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dietChartToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DietLog form1 = new DietLog();
+            form1.Show();
         }
     }
 }

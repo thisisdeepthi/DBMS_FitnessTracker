@@ -43,39 +43,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox15 = new System.Windows.Forms.RichTextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -224,194 +206,14 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
-            // label9
+            // label20
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(64, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 17);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Nutrients";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "walking";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 17);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "skippin";
-            // 
-            // richTextBox6
-            // 
-            this.richTextBox6.Location = new System.Drawing.Point(99, 15);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox6.TabIndex = 18;
-            this.richTextBox6.Text = "";
-            // 
-            // richTextBox7
-            // 
-            this.richTextBox7.Location = new System.Drawing.Point(99, 46);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox7.TabIndex = 19;
-            this.richTextBox7.Text = "";
-            // 
-            // richTextBox8
-            // 
-            this.richTextBox8.Location = new System.Drawing.Point(99, 83);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox8.TabIndex = 20;
-            this.richTextBox8.Text = "";
-            // 
-            // richTextBox9
-            // 
-            this.richTextBox9.Location = new System.Drawing.Point(99, 118);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox9.TabIndex = 21;
-            this.richTextBox9.Text = "";
-            // 
-            // richTextBox10
-            // 
-            this.richTextBox10.Location = new System.Drawing.Point(99, 149);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox10.TabIndex = 22;
-            this.richTextBox10.Text = "";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, -4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 17);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Activities";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "jogging";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 152);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 17);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "yoga";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 117);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 17);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "cycling";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.richTextBox15);
-            this.groupBox2.Controls.Add(this.richTextBox14);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.richTextBox13);
-            this.groupBox2.Controls.Add(this.richTextBox12);
-            this.groupBox2.Controls.Add(this.richTextBox11);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.richTextBox10);
-            this.groupBox2.Controls.Add(this.richTextBox9);
-            this.groupBox2.Controls.Add(this.richTextBox8);
-            this.groupBox2.Controls.Add(this.richTextBox7);
-            this.groupBox2.Controls.Add(this.richTextBox6);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(322, 61);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 199);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            // 
-            // richTextBox11
-            // 
-            this.richTextBox11.Location = new System.Drawing.Point(176, 17);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox11.TabIndex = 29;
-            this.richTextBox11.Text = "";
-            this.richTextBox11.TextChanged += new System.EventHandler(this.richTextBox11_TextChanged);
-            // 
-            // richTextBox12
-            // 
-            this.richTextBox12.Location = new System.Drawing.Point(176, 48);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox12.TabIndex = 30;
-            this.richTextBox12.Text = "";
-            // 
-            // richTextBox13
-            // 
-            this.richTextBox13.Location = new System.Drawing.Point(176, 83);
-            this.richTextBox13.Name = "richTextBox13";
-            this.richTextBox13.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox13.TabIndex = 31;
-            this.richTextBox13.Text = "";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(140, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 17);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "cal";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(140, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(26, 17);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "cal";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(140, 86);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(26, 17);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "cal";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(140, 168);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(26, 17);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "cal";
             // 
             // label19
             // 
@@ -422,120 +224,126 @@
             this.label19.TabIndex = 15;
             this.label19.Text = "cal";
             // 
-            // label20
+            // label18
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(140, 168);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 17);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "cal";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(140, 86);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(26, 17);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "cal";
             // 
-            // label21
+            // label17
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(144, 22);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(26, 17);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "cal";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(140, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(26, 17);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "cal";
             // 
-            // label22
+            // label16
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(144, 52);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(26, 17);
-            this.label22.TabIndex = 33;
-            this.label22.Text = "cal";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(140, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 17);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "cal";
             // 
-            // label23
+            // label9
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(144, 87);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(26, 17);
-            this.label23.TabIndex = 34;
-            this.label23.Text = "cal";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(64, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 17);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Nutrients";
             // 
-            // label24
+            // richTextBox6
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(144, 121);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(26, 17);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "cal";
+            this.richTextBox6.Location = new System.Drawing.Point(75, 15);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(39, 25);
+            this.richTextBox6.TabIndex = 18;
+            this.richTextBox6.Text = "";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, -4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 17);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Activities";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.richTextBox11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.richTextBox6);
+            this.groupBox2.Location = new System.Drawing.Point(322, 61);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(257, 199);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(144, 17);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(21, 17);
+            this.label26.TabIndex = 39;
+            this.label26.Text = "hr";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(144, 152);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(26, 17);
+            this.label25.Size = new System.Drawing.Size(0, 17);
             this.label25.TabIndex = 36;
-            this.label25.Text = "cal";
             // 
-            // richTextBox14
+            // label21
             // 
-            this.richTextBox14.Location = new System.Drawing.Point(176, 117);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox14.TabIndex = 37;
-            this.richTextBox14.Text = "";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(43, 18);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(26, 17);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "cal";
             // 
-            // richTextBox15
+            // richTextBox11
             // 
-            this.richTextBox15.Location = new System.Drawing.Point(176, 152);
-            this.richTextBox15.Name = "richTextBox15";
-            this.richTextBox15.Size = new System.Drawing.Size(39, 25);
-            this.richTextBox15.TabIndex = 38;
-            this.richTextBox15.Text = "";
+            this.richTextBox11.Location = new System.Drawing.Point(171, 15);
+            this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.Size = new System.Drawing.Size(39, 25);
+            this.richTextBox11.TabIndex = 29;
+            this.richTextBox11.Text = "";
+            this.richTextBox11.TextChanged += new System.EventHandler(this.richTextBox11_TextChanged);
             // 
-            // label26
+            // label10
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(221, 25);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(21, 17);
-            this.label26.TabIndex = 39;
-            this.label26.Text = "hr";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 57);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 17);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Must do";
             // 
-            // label27
+            // comboBox1
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(221, 54);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(21, 17);
-            this.label27.TabIndex = 40;
-            this.label27.Text = "hr";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(221, 90);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(21, 17);
-            this.label28.TabIndex = 41;
-            this.label28.Text = "hr";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(221, 121);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(21, 17);
-            this.label29.TabIndex = 42;
-            this.label29.Text = "hr";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(221, 155);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(21, 17);
-            this.label30.TabIndex = 43;
-            this.label30.Text = "hr";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(75, 54);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(112, 24);
+            this.comboBox1.TabIndex = 41;
             // 
             // standard_diet_log
             // 
@@ -583,32 +391,14 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.RichTextBox richTextBox9;
-        private System.Windows.Forms.RichTextBox richTextBox10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox13;
-        private System.Windows.Forms.RichTextBox richTextBox12;
         private System.Windows.Forms.RichTextBox richTextBox11;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.RichTextBox richTextBox15;
-        private System.Windows.Forms.RichTextBox richTextBox14;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
     }
 }
