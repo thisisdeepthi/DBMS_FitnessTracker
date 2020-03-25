@@ -61,5 +61,22 @@ namespace DBMS_FitnessTracker
             ActivityMaster form2 = new ActivityMaster();
             form2.Show();
         }
+
+        private void dietChartToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DietLog dietlog = new DietLog();
+            dietlog.Show();
+        }
+
+        private void activityGoalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetActivity set1 = new SetActivity();
+            set1.Show();
+        }
+
+        private void activityToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
