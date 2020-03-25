@@ -73,7 +73,7 @@ namespace DBMS_FitnessTracker
 
         private void finish_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Finished successfully");
         }
 
      
