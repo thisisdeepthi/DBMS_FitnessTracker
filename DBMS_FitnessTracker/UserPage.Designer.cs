@@ -304,7 +304,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "UserPage";
-            this.Load += new System.EventHandler(this.UserPage_Load_1);
+           // this.Load += new System.EventHandler(this.UserPage_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

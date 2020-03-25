@@ -14,7 +14,7 @@ namespace DBMS_FitnessTracker
     public partial class standard_diet_log : Form
     {
         int i = 1;
-        public static string constr1 = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=harshini_27";
+        public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
         public standard_diet_log()
         {

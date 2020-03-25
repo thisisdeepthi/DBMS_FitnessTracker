@@ -13,7 +13,7 @@ namespace DBMS_FitnessTracker
 { 
     public partial class SetActivity : Form
     {
-        public static string constr1 = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=harshini_27";
+        public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
         public SetActivity()
         {
