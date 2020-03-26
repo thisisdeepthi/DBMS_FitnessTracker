@@ -71,7 +71,6 @@
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
@@ -171,13 +170,14 @@
             // dailyReportToolStripMenuItem
             // 
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dailyReportToolStripMenuItem.Text = "Daily report";
+            this.dailyReportToolStripMenuItem.Click += new System.EventHandler(this.dailyReportToolStripMenuItem_Click);
             // 
             // cumulativeReportToolStripMenuItem
             // 
             this.cumulativeReportToolStripMenuItem.Name = "cumulativeReportToolStripMenuItem";
-            this.cumulativeReportToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.cumulativeReportToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cumulativeReportToolStripMenuItem.Text = "Cumulative report ";
             // 
             // label2

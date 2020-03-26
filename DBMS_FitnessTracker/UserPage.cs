@@ -13,7 +13,7 @@ namespace DBMS_FitnessTracker
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
-        public static string res ="1",dob="";
+        public static string res ="1",dob="",cur="";
         public UserPage()
         {
             InitializeComponent();
@@ -91,26 +91,47 @@ namespace DBMS_FitnessTracker
 
         private void Updatenew_Click(object sender, EventArgs e)
         {
-            findUID();
             dob = agebox.Value.ToString("yyyy-MM-dd");
-            string cmds = "delete from user where name='" + name.Text+"';";
-            MySqlCommand cmd = new MySqlCommand(cmds, con1);
+
+            string gender = string.Empty;
+            if (male.Checked && female.Checked)
+                MessageBox.Show("Select one gender");
+            if (male.Checked)
+                gender = "Male";
+            else if (female.Checked)
+                gender = "Female";
+            else
+                MessageBox.Show("Please select a gender:");
+
+            string height = ht.Value.ToString();
+            string weight = wt.Value.ToString();
+
+            string Query = "update user set dob='" + dob + "',gender='" + gender + "',weight=" + weight + ",height=" + height + ",category='" + category.SelectedItem + "',phoneNo='" + phone.Text + "',email='" + email.Text + "' where name='" + name.Text + "' and userid=" + cur;
+            MySqlCommand cmd = new MySqlCommand(Query, con1);
+
+
             try
             {
+
                 con1.Open();
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Saved Successfully");
                 con1.Close();
-                
-                Save_Click(sender,e);
-               // MessageBox.Show("Updated Successfully");
-                con1.Close();
-               // this.Close();
+                //  this.Close();
+
             }
-            catch(Exception er)
+            catch (MySqlException error)
             {
-                con1.Close();
+                MessageBox.Show(error.Message);
+            }
+            catch (SystemException er)
+            {
                 MessageBox.Show(er.Message);
             }
+            con1.Close();
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,7 +141,8 @@ namespace DBMS_FitnessTracker
 
         private void UserPage_Load(object sender, EventArgs e)
         {
-            string q = "Select dob,gender,height,weight,category,phoneNo,email from user where name='" + Program.userName + "';";
+            findUID();
+            string q = "Select dob,gender,height,weight,category,phoneNo,email,userid from user where name='" + Program.userName + "';";
             MySqlCommand cmd = new MySqlCommand(q, con1);
             if(Program.userName!="")
             {
@@ -130,6 +152,7 @@ namespace DBMS_FitnessTracker
                     MySqlDataReader dr = cmd.ExecuteReader();
                     while(dr.Read())
                     {
+                        cur = dr.GetString(7);
                         phone.Text = dr.GetString(5);
                         email.Text = dr.GetString(6);
                         ht.Value = dr.GetInt16(2);
