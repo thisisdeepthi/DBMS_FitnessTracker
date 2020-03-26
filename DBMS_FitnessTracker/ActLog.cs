@@ -13,7 +13,7 @@ namespace DBMS_FitnessTracker
 {
     public partial class ActLog : Form
     {
-        public static string constr1= "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=harshini_27";
+        public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
         int logno1 = 0,check=0;
         public ActLog()
