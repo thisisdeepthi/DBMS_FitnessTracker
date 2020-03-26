@@ -29,7 +29,7 @@ namespace DBMS_FitnessTracker
         }
         void GenerateGrid1()
         {
-            string cmdstr = "select activityname,duration,caloriesburnt from activitychart join activitymaster on activitychart.aid = activitymaster.activityid where type = 'Low' and userid = "+userid+" and adate = curdate()";
+            string cmdstr = "select activityname as Activity,duration as Duration,caloriesburnt as Calories from activitychart join activitymaster on activitychart.aid = activitymaster.activityid where type = 'Low' and userid = " + userid+" and adate = curdate()";
             MySqlCommand cmd = new MySqlCommand(cmdstr, con1);
             try
             {
@@ -49,7 +49,7 @@ namespace DBMS_FitnessTracker
         }
         void GenerateGrid2()
         {
-            string cmdstr = "select activityname,duration,caloriesburnt from activitychart join activitymaster on activitychart.aid = activitymaster.activityid where type = 'High' and userid = " + userid + " and adate = curdate()";
+            string cmdstr = "select activityname as Activity,duration as Duration ,caloriesburnt as Calories from activitychart join activitymaster on activitychart.aid = activitymaster.activityid where type = 'High' and userid = " + userid + " and adate = curdate()";
             MySqlCommand cmd = new MySqlCommand(cmdstr, con1);
             try
             {
