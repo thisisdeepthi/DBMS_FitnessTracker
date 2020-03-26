@@ -15,11 +15,11 @@ namespace DBMS_FitnessTracker
     {
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
-        int j = 0;
+        int j = 0,uid=0;
         public SetActivity()
         {
             InitializeComponent();
-            
+            FindingUser();
             goalselected(0);
             selectact();
         }
@@ -29,7 +29,7 @@ namespace DBMS_FitnessTracker
             condatabase.Open();
             if (i == 0)
             {
-                Query = "select * from ft.activitymaster where ActivityID in (select ActivityID from ft.mustdo where userid=3) ;";
+                Query = "select * from ft.activitymaster where ActivityID in (select ActivityID from ft.mustdo where userid="+uid+") ;";
                 
             }
             else
@@ -47,6 +47,26 @@ namespace DBMS_FitnessTracker
                 SetUrGoal.Items.Add(sName);
                 SetUrGoal.SetItemChecked(j, true);
                 j++;
+            }
+            condatabase.Close();
+        }
+        void FindingUser()
+        {
+
+            condatabase.Open();
+            string Query = "select * from user where name='" + Program.userName + "';";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    uid = myReader.GetInt32("UserID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             condatabase.Close();
         }
@@ -78,7 +98,7 @@ namespace DBMS_FitnessTracker
 
         private void finish_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Finished successfully");
+            this.Close();
         }
 
      
@@ -99,7 +119,7 @@ namespace DBMS_FitnessTracker
                 MySqlDataReader myReader;
                 try
                 {
-                    int id = 0, uid = 3;
+                    int id = 0;
                     myReader = cmddb.ExecuteReader();
                     while (myReader.Read())
                     {
@@ -138,7 +158,7 @@ namespace DBMS_FitnessTracker
         {
             int flag = 0;
             condatabase.Open(); 
-            string Query1 = "select * from activitymaster a join mustdo m on a.activityid=m.activityid where userid=3;";
+            string Query1 = "select * from activitymaster a join mustdo m on a.activityid=m.activityid where userid="+uid+";";
             MySqlCommand cmd = new MySqlCommand(Query1, condatabase);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())

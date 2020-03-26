@@ -43,6 +43,7 @@
             this.actdur1 = new System.Windows.Forms.TextBox();
             this.acthis = new System.Windows.Forms.CheckedListBox();
             this.goalsdo = new System.Windows.Forms.ListBox();
+            this.finishbut = new System.Windows.Forms.Button();
             this.addnew.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,9 +117,9 @@
             // 
             // actsub
             // 
-            this.actsub.Location = new System.Drawing.Point(334, 221);
+            this.actsub.Location = new System.Drawing.Point(30, 210);
             this.actsub.Name = "actsub";
-            this.actsub.Size = new System.Drawing.Size(75, 23);
+            this.actsub.Size = new System.Drawing.Size(82, 36);
             this.actsub.TabIndex = 12;
             this.actsub.Text = "Submit";
             this.actsub.UseVisualStyleBackColor = true;
@@ -146,14 +147,16 @@
             this.mustdo.AutoSize = true;
             this.mustdo.Location = new System.Drawing.Point(9, 9);
             this.mustdo.Name = "mustdo";
-            this.mustdo.Size = new System.Drawing.Size(47, 13);
+            this.mustdo.Size = new System.Drawing.Size(54, 13);
             this.mustdo.TabIndex = 15;
-            this.mustdo.Text = "Must Do";
+            this.mustdo.Text = "Your Goal";
             this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
             // 
             // addnew
             // 
+            this.addnew.Controls.Add(this.finishbut);
             this.addnew.Controls.Add(this.actdur1);
+            this.addnew.Controls.Add(this.actsub);
             this.addnew.Location = new System.Drawing.Point(209, 20);
             this.addnew.Name = "addnew";
             this.addnew.Size = new System.Drawing.Size(300, 261);
@@ -184,6 +187,16 @@
             this.goalsdo.Size = new System.Drawing.Size(160, 95);
             this.goalsdo.TabIndex = 20;
             // 
+            // finishbut
+            // 
+            this.finishbut.Location = new System.Drawing.Point(146, 210);
+            this.finishbut.Name = "finishbut";
+            this.finishbut.Size = new System.Drawing.Size(93, 36);
+            this.finishbut.TabIndex = 13;
+            this.finishbut.Text = "Finish";
+            this.finishbut.UseVisualStyleBackColor = true;
+            this.finishbut.Click += new System.EventHandler(this.finishbut_Click);
+            // 
             // ActLog
             // 
             this.AllowDrop = true;
@@ -195,7 +208,6 @@
             this.Controls.Add(this.mustdo);
             this.Controls.Add(this.actrem1);
             this.Controls.Add(this.actiname);
-            this.Controls.Add(this.actsub);
             this.Controls.Add(this.actrem);
             this.Controls.Add(this.worklow);
             this.Controls.Add(this.workhigh);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.CheckedListBox acthis;
         private System.Windows.Forms.TextBox actdur1;
         private System.Windows.Forms.ListBox goalsdo;
+        private System.Windows.Forms.Button finishbut;
     }
 }
