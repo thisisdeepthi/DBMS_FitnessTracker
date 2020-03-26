@@ -92,7 +92,7 @@
             this.setacti.Controls.Add(this.addact);
             this.setacti.Controls.Add(this.sethours);
             this.setacti.Controls.Add(this.actdur);
-            this.setacti.Location = new System.Drawing.Point(4, 39);
+            this.setacti.Location = new System.Drawing.Point(15, 43);
             this.setacti.Name = "setacti";
             this.setacti.Size = new System.Drawing.Size(267, 209);
             this.setacti.TabIndex = 22;
