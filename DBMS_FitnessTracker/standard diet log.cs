@@ -27,7 +27,7 @@ namespace DBMS_FitnessTracker
             Label label;
             TextBox textbox;
             condatabase.Open();
-            string Query = "select * from ft.mustdo natural join ft.activitymaster;";
+            string Query = "select * from ft.mustdo natural join ft.activitymaster where userid=3;";
             MySqlCommand cmd = new MySqlCommand(Query,condatabase);
             MySqlDataReader myReader;
             myReader = cmd.ExecuteReader();
@@ -83,7 +83,7 @@ namespace DBMS_FitnessTracker
             for (int j=1;j<k;j++)
             {
                 condatabase.Open();
-                string Query = "update  mustdo set Actduration=" +t[j] + " where ActivityID in (select ActivityID from activitymaster where ActivityName='" + s[j]+ "');";
+                string Query = "update  mustdo set Actduration=" +t[j] + " where ActivityID in (select ActivityID from activitymaster where ActivityName='" + s[j]+ "' and userid=3);";
                 MySqlCommand cmd = new MySqlCommand(Query, condatabase);
                 cmd.ExecuteNonQuery();
                 condatabase.Close();
