@@ -15,11 +15,14 @@ namespace DBMS_FitnessTracker
     {
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
+        int logno1 = 0,check=0;
+        int uid = 0;
         public ActLog()
         {
             InitializeComponent();
+            FindingUser();
+            GoalsToDo();
             fillcombo();
-            check();
             ActDone();
         }
         void fillcombo()
@@ -43,39 +46,31 @@ namespace DBMS_FitnessTracker
             }
             condatabase.Close();  
         }
-        void check()
-        {
-            int i = 0;
-            condatabase.Open();
-            string Query = "select * from ft.mustdo;";
-            MySqlCommand cmddb = new MySqlCommand(Query, condatabase);
-            MySqlDataReader myReader;
-            try
-            {
-                CheckBox box;
-                myReader = cmddb.ExecuteReader();
-                while (myReader.Read())
-                {
-                    string sId = myReader.GetString("ActivityID");
-                    box = new CheckBox();
-                    box.Tag = i.ToString();
-                    box.Text = "a";
-                    box.AutoSize = true;
-                    box.Location = new Point(75, i * 25);
-                    box.Padding = new Padding(3); //box.Location = new Point(i * 50, 10); //horizontal
-                    this.Controls.Add(box);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            condatabase.Close();               
-        }
+       
        
         private void ActLog_Load(object sender, EventArgs e)
         {
 
+        }
+        void FindingUser()
+        {
+
+            condatabase.Open();
+            string Query = "select * from user where name='" + Program.userName + "';";            
+            try
+            {
+               MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    uid = myReader.GetInt32("UserID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -162,12 +157,14 @@ namespace DBMS_FitnessTracker
             }
             condatabase.Close();
             condatabase.Open();
-            Query ="insert into activitychart(LogNo,Adate,AID,Duration,Type,CaloriesBurnt,UserID,Remark) values("+ logno + ",CURDATE(),"+id+","+x+",'"+intensity+"',"+CaloriesBurnt+",1,'"+actrem1.Text+"');";
+            Query ="insert into activitychart(LogNo,Adate,AID,Duration,Type,CaloriesBurnt,UserID,Remark) values("+ logno + ",CURDATE(),"+id+","+x+",'"+intensity+"',"+CaloriesBurnt+","+uid+",'"+actrem1.Text+"');";
             try
             {
                // condatabase.Open();
                 cmd = new MySqlCommand(Query,condatabase);
                 cmd.ExecuteNonQuery();
+                condatabase.Close();
+                ActDone();
                 MessageBox.Show("Saved Successfully");
                 //condatabase.Close();
             }
@@ -175,9 +172,27 @@ namespace DBMS_FitnessTracker
             {
                 MessageBox.Show(ex.Message);
             }
+            
+        }
+        void GoalsToDo()
+        {
+            condatabase.Open();
+            string goals;
+            int j = 1;
+            string Query = " select * from activitymaster natural join mustdo where userid="+uid+";";
+            MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+            MySqlDataReader myReader = cmd.ExecuteReader();
+            while(myReader.Read())
+            {
+                string sName = myReader.GetString("Activityname");
+                int dur = myReader.GetInt32("Actduration");
+                 goals = j+". "+sName + " - " + dur+" mins";
+                j++;
+                goalsdo.Items.Add(goals);                
+            }
+            
             condatabase.Close();
         }
-
         private void FillCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -197,19 +212,37 @@ namespace DBMS_FitnessTracker
         {
 
         }
+
+        private void finishbut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         void ActDone()
         {
             condatabase.Open();
-            string Query = "select * from activitymaster natural join mustdo where userID=2;";
-            MySqlCommand cmd = new MySqlCommand(Query,condatabase);
-            MySqlDataReader myReader;
-            myReader = cmd.ExecuteReader();
-            while(myReader.Read())
+            string Query = "";            
+            if (logno1 == 0)
+                {
+                    Query = "select * from activitymaster join activitychart on activityid=aid where adate=CURDATE() and userid="+uid+";";
+                }
+                else
+                {
+                    Query = "select * from activitymaster join activitychart on activityid=aid where adate=CURDATE() and userid="+uid+" and logno=" + logno1 + ";";
+                }
+              MySqlCommand  cmd = new MySqlCommand(Query, condatabase);
+               MySqlDataReader myReader = cmd.ExecuteReader();
+            while (myReader.Read())
             {
                 string sName = myReader.GetString("ActivityName");
-                acthis.Items.Add(sName);
+                int dur = myReader.GetInt32("duration");
+                acthis.Items.Add(sName + " - " + dur + " mins ");
+                acthis.SetItemChecked(check, true);
+                logno1++;
+                check++;
             }
             condatabase.Close();
         }
+
     }
 }

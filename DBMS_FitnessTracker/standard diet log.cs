@@ -13,13 +13,34 @@ namespace DBMS_FitnessTracker
 {
     public partial class standard_diet_log : Form
     {
-        int i = 1;
+        int i = 1,uid=0;
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
         public standard_diet_log()
         {
             InitializeComponent();
+            FindingUser();
             setact();
+        }
+        void FindingUser()
+        {
+
+            condatabase.Open();
+            string Query = "select * from user where name='" + Program.userName + "';";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
+                {
+                    uid = myReader.GetInt32("UserID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
         }
         void setact()
         {
@@ -27,7 +48,7 @@ namespace DBMS_FitnessTracker
             Label label;
             TextBox textbox;
             condatabase.Open();
-            string Query = "select * from ft.mustdo natural join ft.activitymaster;";
+            string Query = "select * from ft.mustdo natural join ft.activitymaster where userid="+uid+";";
             MySqlCommand cmd = new MySqlCommand(Query,condatabase);
             MySqlDataReader myReader;
             myReader = cmd.ExecuteReader();
@@ -83,12 +104,17 @@ namespace DBMS_FitnessTracker
             for (int j=1;j<k;j++)
             {
                 condatabase.Open();
-                string Query = "update  mustdo set Actduration=" +t[j] + " where ActivityID in (select ActivityID from activitymaster where ActivityName='" + s[j]+ "');";
+                string Query = "update  mustdo set Actduration=" +t[j] + " where ActivityID in (select ActivityID from activitymaster where ActivityName='" + s[j]+ "' and userid="+uid+");";
                 MySqlCommand cmd = new MySqlCommand(Query, condatabase);
                 cmd.ExecuteNonQuery();
                 condatabase.Close();
             }
             MessageBox.Show("Saved Successfully");            
+        }
+
+        private void Closebut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void label35_Click(object sender, EventArgs e)
