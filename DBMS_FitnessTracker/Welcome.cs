@@ -29,7 +29,7 @@ namespace DBMS_FitnessTracker
         {
             DReport form1 = new DReport();
             form1.Show();
-            //testttt
+            
         }
 
         private void cumulativeReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,5 +61,49 @@ namespace DBMS_FitnessTracker
             ActivityMaster form2 = new ActivityMaster();
             form2.Show();
         }
+
+        private void dietChartToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            DietLog dietlog = new DietLog();
+            dietlog.Show();
+        }
+
+        private void activityGoalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetActivity set1 = new SetActivity();
+            set1.Show();
+        }
+
+        private void activityToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            
+            Program.userName = user.Text;
+            login.Enabled = false;
+            logout.Enabled = true;
+        }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+            if (Program.userName != "")
+            { login.Enabled = false; logout.Enabled = true; }
+            else
+            { logout.Enabled = false; login.Enabled = true; }
+                
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            Program.userName = "";
+            logout.Enabled = false;
+            login.Enabled = true;
+
+        }
+
+        
     }
 }

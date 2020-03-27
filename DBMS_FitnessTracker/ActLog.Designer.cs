@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.history = new System.Windows.Forms.Label();
-            this.txthistory = new System.Windows.Forms.TextBox();
-            this.addnew = new System.Windows.Forms.Label();
             this.actname = new System.Windows.Forms.Label();
             this.actdur = new System.Windows.Forms.Label();
-            this.actdur1 = new System.Windows.Forms.DomainUpDown();
             this.actwork = new System.Windows.Forms.Label();
             this.workhigh = new System.Windows.Forms.RadioButton();
             this.worklow = new System.Windows.Forms.RadioButton();
@@ -42,32 +39,23 @@
             this.actiname = new System.Windows.Forms.ComboBox();
             this.actrem1 = new System.Windows.Forms.TextBox();
             this.mustdo = new System.Windows.Forms.Label();
+            this.addnew = new System.Windows.Forms.GroupBox();
+            this.actdur1 = new System.Windows.Forms.TextBox();
+            this.acthis = new System.Windows.Forms.CheckedListBox();
+            this.goalsdo = new System.Windows.Forms.ListBox();
+            this.finishbut = new System.Windows.Forms.Button();
+            this.addnew.SuspendLayout();
             this.SuspendLayout();
             // 
             // history
             // 
             this.history.AutoSize = true;
-            this.history.Location = new System.Drawing.Point(9, 186);
+            this.history.Location = new System.Drawing.Point(9, 163);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(68, 13);
             this.history.TabIndex = 0;
             this.history.Text = "About Today";
-            // 
-            // txthistory
-            // 
-            this.txthistory.Location = new System.Drawing.Point(12, 224);
-            this.txthistory.Name = "txthistory";
-            this.txthistory.Size = new System.Drawing.Size(100, 20);
-            this.txthistory.TabIndex = 1;
-            // 
-            // addnew
-            // 
-            this.addnew.AutoSize = true;
-            this.addnew.Location = new System.Drawing.Point(192, 18);
-            this.addnew.Name = "addnew";
-            this.addnew.Size = new System.Drawing.Size(51, 13);
-            this.addnew.TabIndex = 2;
-            this.addnew.Text = "Add New";
+            this.history.Click += new System.EventHandler(this.history_Click);
             // 
             // actname
             // 
@@ -83,17 +71,9 @@
             this.actdur.AutoSize = true;
             this.actdur.Location = new System.Drawing.Point(249, 91);
             this.actdur.Name = "actdur";
-            this.actdur.Size = new System.Drawing.Size(47, 13);
+            this.actdur.Size = new System.Drawing.Size(88, 13);
             this.actdur.TabIndex = 5;
-            this.actdur.Text = "Duration";
-            // 
-            // actdur1
-            // 
-            this.actdur1.Location = new System.Drawing.Point(356, 91);
-            this.actdur1.Name = "actdur1";
-            this.actdur1.Size = new System.Drawing.Size(120, 20);
-            this.actdur1.TabIndex = 6;
-            this.actdur1.Text = "select duration";
+            this.actdur.Text = "Duration (in mins)";
             // 
             // actwork
             // 
@@ -137,9 +117,9 @@
             // 
             // actsub
             // 
-            this.actsub.Location = new System.Drawing.Point(334, 221);
+            this.actsub.Location = new System.Drawing.Point(30, 210);
             this.actsub.Name = "actsub";
-            this.actsub.Size = new System.Drawing.Size(75, 23);
+            this.actsub.Size = new System.Drawing.Size(82, 36);
             this.actsub.TabIndex = 12;
             this.actsub.Text = "Submit";
             this.actsub.UseVisualStyleBackColor = true;
@@ -165,12 +145,57 @@
             // mustdo
             // 
             this.mustdo.AutoSize = true;
-            this.mustdo.Location = new System.Drawing.Point(9, 18);
+            this.mustdo.Location = new System.Drawing.Point(9, 9);
             this.mustdo.Name = "mustdo";
-            this.mustdo.Size = new System.Drawing.Size(47, 13);
+            this.mustdo.Size = new System.Drawing.Size(54, 13);
             this.mustdo.TabIndex = 15;
-            this.mustdo.Text = "Must Do";
+            this.mustdo.Text = "Your Goal";
             this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
+            // 
+            // addnew
+            // 
+            this.addnew.Controls.Add(this.finishbut);
+            this.addnew.Controls.Add(this.actdur1);
+            this.addnew.Controls.Add(this.actsub);
+            this.addnew.Location = new System.Drawing.Point(209, 20);
+            this.addnew.Name = "addnew";
+            this.addnew.Size = new System.Drawing.Size(300, 261);
+            this.addnew.TabIndex = 16;
+            this.addnew.TabStop = false;
+            this.addnew.Text = "Add New";
+            // 
+            // actdur1
+            // 
+            this.actdur1.Location = new System.Drawing.Point(146, 72);
+            this.actdur1.Name = "actdur1";
+            this.actdur1.Size = new System.Drawing.Size(100, 20);
+            this.actdur1.TabIndex = 0;
+            // 
+            // acthis
+            // 
+            this.acthis.FormattingEnabled = true;
+            this.acthis.Location = new System.Drawing.Point(12, 182);
+            this.acthis.Name = "acthis";
+            this.acthis.Size = new System.Drawing.Size(160, 94);
+            this.acthis.TabIndex = 17;
+            // 
+            // goalsdo
+            // 
+            this.goalsdo.FormattingEnabled = true;
+            this.goalsdo.Location = new System.Drawing.Point(12, 40);
+            this.goalsdo.Name = "goalsdo";
+            this.goalsdo.Size = new System.Drawing.Size(160, 95);
+            this.goalsdo.TabIndex = 20;
+            // 
+            // finishbut
+            // 
+            this.finishbut.Location = new System.Drawing.Point(146, 210);
+            this.finishbut.Name = "finishbut";
+            this.finishbut.Size = new System.Drawing.Size(93, 36);
+            this.finishbut.TabIndex = 13;
+            this.finishbut.Text = "Finish";
+            this.finishbut.UseVisualStyleBackColor = true;
+            this.finishbut.Click += new System.EventHandler(this.finishbut_Click);
             // 
             // ActLog
             // 
@@ -178,24 +203,25 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.goalsdo);
+            this.Controls.Add(this.acthis);
             this.Controls.Add(this.mustdo);
             this.Controls.Add(this.actrem1);
             this.Controls.Add(this.actiname);
-            this.Controls.Add(this.actsub);
             this.Controls.Add(this.actrem);
             this.Controls.Add(this.worklow);
             this.Controls.Add(this.workhigh);
             this.Controls.Add(this.actwork);
-            this.Controls.Add(this.actdur1);
             this.Controls.Add(this.actdur);
             this.Controls.Add(this.actname);
-            this.Controls.Add(this.addnew);
-            this.Controls.Add(this.txthistory);
             this.Controls.Add(this.history);
+            this.Controls.Add(this.addnew);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ActLog";
             this.Text = "ActLog";
             this.Load += new System.EventHandler(this.ActLog_Load);
+            this.addnew.ResumeLayout(false);
+            this.addnew.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,11 +230,8 @@
         #endregion
 
         private System.Windows.Forms.Label history;
-        private System.Windows.Forms.TextBox txthistory;
-        private System.Windows.Forms.Label addnew;
         private System.Windows.Forms.Label actname;
         private System.Windows.Forms.Label actdur;
-        private System.Windows.Forms.DomainUpDown actdur1;
         private System.Windows.Forms.Label actwork;
         private System.Windows.Forms.RadioButton workhigh;
         private System.Windows.Forms.RadioButton worklow;
@@ -217,5 +240,10 @@
         private System.Windows.Forms.ComboBox actiname;
         private System.Windows.Forms.TextBox actrem1;
         private System.Windows.Forms.Label mustdo;
+        private System.Windows.Forms.GroupBox addnew;
+        private System.Windows.Forms.CheckedListBox acthis;
+        private System.Windows.Forms.TextBox actdur1;
+        private System.Windows.Forms.ListBox goalsdo;
+        private System.Windows.Forms.Button finishbut;
     }
 }
