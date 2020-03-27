@@ -59,7 +59,7 @@ namespace DBMS_FitnessTracker
             
             string Query = "insert into user (userid,name,dob,gender,phoneNo,email,height,weight,category) values ("+res+",'" + name.Text + "','" + dob + "','" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
-
+            
 
             try 
             {

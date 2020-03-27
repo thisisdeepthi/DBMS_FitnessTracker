@@ -15,12 +15,34 @@ namespace DBMS_FitnessTracker
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
-        public static string res;
+        public static string res="1";
         public DietMaster()
         {
             InitializeComponent();
-        }
+            findexisting();
 
+        }
+        void findexisting()
+        {
+            string cmds = "select * from ft.DietMaster";
+            MySqlCommand cmd = new MySqlCommand(cmds, con1);
+            MySqlDataReader reader;
+            try
+            {
+                con1.Open();
+                reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+                    string name = reader.GetString("DietName");
+                    
+                }
+            }
+            catch(MySqlException er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            con1.Close();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +87,25 @@ namespace DBMS_FitnessTracker
             string others = textBox7.ToString();
 
             string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "');";
-            
+            MySqlCommand cmd = new MySqlCommand(Query, con1);
+
+            try
+            {
+                con1.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Details saved successfully");
+                con1.Close();
+                this.Close();
+            }
+            catch(MySqlException er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            catch(SystemException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            con1.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EXISTING = new System.Windows.Forms.GroupBox();
             this.ADDNEW = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -45,19 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ADDNEW.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
-            // 
-            this.EXISTING.Location = new System.Drawing.Point(12, 12);
-            this.EXISTING.Name = "groupBox1";
-            this.EXISTING.Size = new System.Drawing.Size(418, 484);
-            this.EXISTING.TabIndex = 0;
-            this.EXISTING.TabStop = false;
-            this.EXISTING.Text = "EXISTING";
-            // 
-            // groupBox2
+            // ADDNEW
             // 
             this.ADDNEW.Controls.Add(this.textBox7);
             this.ADDNEW.Controls.Add(this.textBox6);
@@ -74,7 +65,7 @@
             this.ADDNEW.Controls.Add(this.label2);
             this.ADDNEW.Controls.Add(this.label1);
             this.ADDNEW.Location = new System.Drawing.Point(464, 12);
-            this.ADDNEW.Name = "groupBox2";
+            this.ADDNEW.Name = "ADDNEW";
             this.ADDNEW.Size = new System.Drawing.Size(392, 484);
             this.ADDNEW.TabIndex = 1;
             this.ADDNEW.TabStop = false;
@@ -141,22 +132,22 @@
             this.listBox1.TabIndex = 8;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // radioButton2
+            // NO
             // 
             this.NO.AutoSize = true;
             this.NO.Location = new System.Drawing.Point(179, 448);
-            this.NO.Name = "radioButton2";
+            this.NO.Name = "NO";
             this.NO.Size = new System.Drawing.Size(50, 21);
             this.NO.TabIndex = 7;
             this.NO.TabStop = true;
             this.NO.Text = "NO";
             this.NO.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // YES
             // 
             this.YES.AutoSize = true;
             this.YES.Location = new System.Drawing.Point(179, 413);
-            this.YES.Name = "radioButton1";
+            this.YES.Name = "YES";
             this.YES.Size = new System.Drawing.Size(56, 21);
             this.YES.TabIndex = 6;
             this.YES.TabStop = true;
@@ -218,7 +209,7 @@
             this.label1.Text = "NAME";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // Save
             // 
             this.Save.Location = new System.Drawing.Point(923, 219);
             this.Save.Name = "Save";
@@ -227,15 +218,24 @@
             this.Save.Text = "SAVE";
             this.Save.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(24, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(422, 484);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "EXISTING";
+            // 
             // DietMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1048, 517);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.ADDNEW);
-            this.Controls.Add(this.EXISTING);
             this.Name = "DietMaster";
             this.Text = "DietMaster";
             this.ADDNEW.ResumeLayout(false);
@@ -245,8 +245,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox EXISTING;
         private System.Windows.Forms.GroupBox ADDNEW;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.RadioButton NO;
@@ -263,5 +261,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
