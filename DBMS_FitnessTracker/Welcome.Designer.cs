@@ -149,7 +149,7 @@
             this.activityChartToolStripMenuItem.Name = "activityChartToolStripMenuItem";
             this.activityChartToolStripMenuItem.Size = new System.Drawing.Size(221, 34);
             this.activityChartToolStripMenuItem.Text = "Activity chart ";
-            this.activityChartToolStripMenuItem.Click += new System.EventHandler(this.activityChartToolStripMenuItem_Click);
+           // this.activityChartToolStripMenuItem.Click += new System.EventHandler(this.activityChartToolStripMenuItem.Click);
             // 
             // dietChartToolStripMenuItem
             // 
