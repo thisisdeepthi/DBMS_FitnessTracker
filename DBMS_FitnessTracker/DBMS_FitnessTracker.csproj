@@ -98,6 +98,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetActivity.Designer.cs">
+      <DependentUpon>SetActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,11 +145,17 @@
     <EmbeddedResource Include="DietMaster.resx">
       <DependentUpon>DietMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DReport.resx">
+      <DependentUpon>DReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetActivity.resx">
+      <DependentUpon>SetActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="standard diet log.resx">
       <DependentUpon>standard diet log.cs</DependentUpon>

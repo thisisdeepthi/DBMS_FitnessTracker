@@ -12,14 +12,13 @@ namespace DBMS_FitnessTracker
 {
     public partial class DietLog : Form
     {
-        public static string constr = "server=localhost;user id=root;database=ft;CharSet=utf8;persistsecurityinfo=True;password=ishu@psg17";
-        MySqlConnection con1 = new MySqlConnection(constr);
+        public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+            MySqlConnection con1 = new MySqlConnection(constr);
 
         public DietLog()
         {
             InitializeComponent();
         }
 
-
-    }
+       
 }
