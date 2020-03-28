@@ -52,8 +52,8 @@ namespace DBMS_FitnessTracker
 
         private void dietToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DietMaster Form1 = new DietMaster();
-            Form1.Show();
+            DietMaster form1 = new DietMaster();
+            form1.Show();
         }
 
         private void activityToolStripMenuItem_Click(object sender, EventArgs e)

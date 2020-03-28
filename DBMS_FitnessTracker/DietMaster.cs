@@ -19,30 +19,9 @@ namespace DBMS_FitnessTracker
         public DietMaster()
         {
             InitializeComponent();
-            findexisting();
 
         }
-        void findexisting()
-        {
-            string cmds = "select * from ft.DietMaster";
-            MySqlCommand cmd = new MySqlCommand(cmds, con1);
-            MySqlDataReader reader;
-            try
-            {
-                con1.Open();
-                reader = cmd.ExecuteReader();
-                while(reader.Read())
-                {
-                    string name = reader.GetString("DietName");
-                    
-                }
-            }
-            catch(MySqlException er)
-            {
-                MessageBox.Show(er.Message);
-            }
-            con1.Close();
-        }
+       
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -86,7 +65,7 @@ namespace DBMS_FitnessTracker
             string fat = textBox6.ToString();
             string others = textBox7.ToString();
 
-            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "');";
+            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,caloriesperserving,others,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + label3 + "," + others + ",'" + JUNK + "');";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
 
             try
@@ -119,6 +98,34 @@ namespace DBMS_FitnessTracker
         }
 
         private void DietMaster_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EXISTING_Enter(object sender, EventArgs e)
+        {
+
+            string cmds = "select * from ft.DietMaster";
+            MySqlCommand cmd = new MySqlCommand(cmds, con1);
+            MySqlDataReader reader;
+            try
+            {
+                con1.Open();
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string name = reader.GetString("DietName");
+                    textBox1.AppendText(name);
+                }
+            }
+            catch (MySqlException er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            con1.Close();
+        }
+
+        private void ADDNEW_Enter(object sender, EventArgs e)
         {
 
         }
