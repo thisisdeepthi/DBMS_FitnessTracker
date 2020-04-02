@@ -67,7 +67,7 @@ namespace DBMS_FitnessTracker
             string Query = "insert into DietMaster(name,carbo,pro,vit,fat,others,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + others + "," + label3 + ",'" + JUNK + "');";
             
         }
-
+       
         private void label4_Click(object sender, EventArgs e)
         {
 

@@ -50,7 +50,7 @@ namespace DBMS_FitnessTracker
        
         private void ActLog_Load(object sender, EventArgs e)
         {
-
+            
         }
         void FindingUser()
         {
@@ -216,6 +216,20 @@ namespace DBMS_FitnessTracker
         private void finishbut_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void acthis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goalsdo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void actrem1_TextChanged(object sender, EventArgs e)
+        {
         }
 
         void ActDone()
