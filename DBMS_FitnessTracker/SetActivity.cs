@@ -92,7 +92,11 @@ namespace DBMS_FitnessTracker
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
+            this.Controls.Clear();
             standard_diet_log std = new standard_diet_log();
+            std.TopLevel = false;
+            this.Controls.Add(std); 
             std.Show();
         }
 
@@ -175,6 +179,11 @@ namespace DBMS_FitnessTracker
                     addact.Enabled = true;
             }
             condatabase.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void actdur_TextChanged(object sender, EventArgs e)

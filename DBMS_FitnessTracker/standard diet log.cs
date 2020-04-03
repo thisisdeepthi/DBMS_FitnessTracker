@@ -59,12 +59,14 @@ namespace DBMS_FitnessTracker
                 //label.Tag = i.ToString();
                 label.Text = myReader.GetString("ActivityName");
                 label.AutoSize = true;
-                label.Location = new Point(130, i * 25);
+                label.Location = new Point(219, i*60);
+                label.Font = new Font("Microsoft Sans Serif", 10);
                 textbox = new TextBox();
                 textbox.Text = myReader.GetString("ActDuration");
                 //textbox.Tag = i.ToString();
                 textbox.Name = "txt" + i.ToString();
-                textbox.Location = new Point(200, i * 25);
+                textbox.Location = new Point(393, 60*i);
+                textbox.Font = new Font("Microsoft Sans Serif", 10);
                 this.Controls.Add(label);
                 this.Controls.Add(textbox);
                 i++;                 
