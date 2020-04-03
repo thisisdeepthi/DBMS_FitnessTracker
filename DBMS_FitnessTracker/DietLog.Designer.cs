@@ -21,7 +21,7 @@ namespace DBMS_FitnessTracker
         }
 
         #region Windows Form Designer generated code
-
+    
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -94,6 +94,7 @@ namespace DBMS_FitnessTracker
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(31, 20);
             this.numericUpDown1.TabIndex = 5;
+
             // 
             // textBox2
             // 
@@ -102,6 +103,7 @@ namespace DBMS_FitnessTracker
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(97, 20);
             this.textBox2.TabIndex = 6;
+
             // 
             // groupBox1
             // 
@@ -129,6 +131,7 @@ namespace DBMS_FitnessTracker
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 28;
+
             // 
             // button1
             // 
@@ -139,6 +142,7 @@ namespace DBMS_FitnessTracker
             this.button1.TabIndex = 27;
             this.button1.Text = "calculate";
             this.button1.UseVisualStyleBackColor = true;
+
             // 
             // label1
             // 
@@ -179,6 +183,7 @@ namespace DBMS_FitnessTracker
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "calories";
+
             // 
             // label8
             // 
@@ -208,7 +213,7 @@ namespace DBMS_FitnessTracker
             this.richTextBox1.Size = new System.Drawing.Size(31, 22);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
-            // 
+
             // richTextBox3
             // 
             this.richTextBox3.Location = new System.Drawing.Point(80, 58);
@@ -307,6 +312,7 @@ namespace DBMS_FitnessTracker
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DietLog";
             this.Text = "DietLog";
+
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
