@@ -7,41 +7,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DBMS_FitnessTracker
 {
     public partial class login : Form
     {
+        public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+        MySqlConnection con1 = new MySqlConnection(constr);
         public login()
         {
             InitializeComponent();
+
         }
 
         private void login_Load(object sender, EventArgs e)
         {
-            if (Program.userName != "")
-            { login1.Enabled = false; logout.Enabled = true; }
-            else
-            { logout.Enabled = false; login1.Enabled = true; }
+
 
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.userName = user.Text;
-            login1.Enabled = false;
-            logout.Enabled = true;
-            this.Hide();
-            Welcome form1 = new Welcome();
-            form1.Show();
-        } 
+            try
+            {
+                if (user.Text == "" || password.Text == "")
+                    MessageBox.Show("Please enter all mandatory fields");
+                else
+                {
+                    con1.Open();
+                    string command = "select password from user where name='" + user.Text + "';";
+                    MySqlCommand cmd = new MySqlCommand(command, con1);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        string pd = dr.GetString(0);
+                        if (pd == password.Text)
+                        {
+                            //correct password
+                            {
+                                Program.userName = user.Text;
+                                
+                                //logout.Enabled = true;
+                                this.Hide();
+                                Welcome form1 = new Welcome();
+                                form1.Show();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect  password ! try again!!");
+                        }
 
-        private void logout_Click(object sender, EventArgs e)
-        {
-            Program.userName = "";
-            logout.Enabled = false;
-            login1.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect user name !", "Attention required");
+                    }
+                }
+
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            con1.Close();
+
+           
+
         }
+         
+         
+
+        
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            NewUser form = new NewUser();
+            form.Show();
+            this.Close();
+        }
+
     }
 }
