@@ -197,7 +197,7 @@
             // 
             // textBox1
             // 
-<
+
             this.textBox1.Location = new System.Drawing.Point(134, 30);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 

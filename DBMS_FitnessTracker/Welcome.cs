@@ -15,6 +15,7 @@ namespace DBMS_FitnessTracker
         public Welcome()
         {
             InitializeComponent();
+            testToolStripMenuItem.Text = "Welcome " + Program.userName;
            
         }
 
@@ -96,6 +97,31 @@ namespace DBMS_FitnessTracker
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            UserPage Form1 = new UserPage();
+            Form1.TopLevel = false;
+            panel1.Controls.Add(Form1);
+            Form1.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.userName = "";
+            login newform = new login();
+            newform.Show();
+            this.Close();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            changepwd Form1 = new changepwd ();
+            Form1.Show();
+            this.Close();
         }
     }
 }

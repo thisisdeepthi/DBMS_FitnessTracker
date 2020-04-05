@@ -17,8 +17,11 @@ namespace DBMS_FitnessTracker
         public UserPage()
         {
             InitializeComponent();
-        }
 
+            
+            
+              
+        }
         public int findUID()
         {
             string cmds = "Select max(userid)+1 as id from ft.user";
@@ -27,17 +30,17 @@ namespace DBMS_FitnessTracker
             {
                 con1.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
-                
+
                 if (dr.Read() && !dr.IsDBNull(0))
                 {
 
                     res = dr.GetInt16(0).ToString();
-                  
+
                 }
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
 
@@ -45,10 +48,13 @@ namespace DBMS_FitnessTracker
             con1.Close();
             return 0;
         }
+
+
         private void Save_Click(object sender, System.EventArgs e)
         {
             dob = agebox.Value.ToString("yyyy-MM-dd");
-            findUID();
+           findUID();
+            
             string gender = string.Empty;
             if (male.Checked && female.Checked)
                 MessageBox.Show("Select one gender");
@@ -62,7 +68,7 @@ namespace DBMS_FitnessTracker
             string height = ht.Value.ToString();
             string weight = wt.Value.ToString();
             
-            string Query = "insert into user (userid,name,dob,gender,phoneNo,email,height,weight,category) values ("+res+",'" + name.Text + "','" + dob + "','" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
+            string Query = "insert into user (userid,name,password,dob,gender,phoneNo,email,height,weight,category) values ("+res+",'" + name.Text + "','"+NewUser.password+"','" + dob + "','" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
 
 
@@ -71,7 +77,11 @@ namespace DBMS_FitnessTracker
                 
                 con1.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Saved Successfully! Now you re ready to rock!! Please go set the goals ! You can check if our advised goals are sufficient ");
+                Welcome newPage = new Welcome();
+                newPage.Show();
+                this.Close();
+
                 con1.Close();
               //  this.Close();
 
@@ -134,21 +144,15 @@ namespace DBMS_FitnessTracker
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         
 
         private void UserPage_Load(object sender, EventArgs e)
         {
-            findUID();
+           // findUID();
             string q = "Select dob,gender,height,weight,category,phoneNo,email,userid from user where name='" + Program.userName + "';";
             MySqlCommand cmd = new MySqlCommand(q, con1);
             if(Program.userName!="")
@@ -176,12 +180,17 @@ namespace DBMS_FitnessTracker
                         //MessageBox.Show(test.ToString());
                         agebox.Value = test;
                         name.Text = Program.userName;
+                        Save.Enabled = false;
 
                     }
                 }
                 catch(MySqlException er)
                 { MessageBox.Show(er.Message); }
                 con1.Close();
+            }
+            else
+            { name.Text = NewUser.username;
+                Updatenew.Enabled = false;
             }
         }
 
