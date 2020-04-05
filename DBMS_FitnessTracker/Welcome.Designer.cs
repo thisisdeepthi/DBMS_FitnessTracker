@@ -116,7 +116,7 @@
             this.dietToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.dietToolStripMenuItem.Text = "Diet ";
 
-            this.dietToolStripMenuItem.Click += new System.EventHandler(this.dietToolStripMenuItem_Click);
+            this.dietToolStripMenuItem.Click += new System.EventHandler(this.dietToolStripMenuItem_Click_1);
 
             
             // 
