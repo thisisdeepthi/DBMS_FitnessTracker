@@ -57,7 +57,7 @@
             this.history.Size = new System.Drawing.Size(143, 26);
             this.history.TabIndex = 0;
             this.history.Text = "About Today";
-            this.history.Click += new System.EventHandler(this.history_Click);
+            
             // 
             // actname
             // 
@@ -148,7 +148,7 @@
             this.actiname.Name = "actiname";
             this.actiname.Size = new System.Drawing.Size(180, 34);
             this.actiname.TabIndex = 13;
-            this.actiname.SelectedIndexChanged += new System.EventHandler(this.FillCombo_SelectedIndexChanged);
+            
             // 
             // actrem1
             // 
@@ -170,7 +170,7 @@
             this.mustdo.Size = new System.Drawing.Size(117, 26);
             this.mustdo.TabIndex = 15;
             this.mustdo.Text = "Your Goal";
-            this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
+          
             // 
             // addnew
             // 
@@ -223,6 +223,7 @@
             this.acthis.Name = "acthis";
             this.acthis.Size = new System.Drawing.Size(340, 229);
             this.acthis.TabIndex = 17;
+            
             // 
             // goalsdo
             // 
