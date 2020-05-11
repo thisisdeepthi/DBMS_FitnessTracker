@@ -94,7 +94,7 @@ namespace DBMS_FitnessTracker
         {
 
             this.Controls.Clear();
-            standard_diet_log std = new standard_diet_log();
+            activityGoatEdit std = new activityGoatEdit();
             std.TopLevel = false;
             this.Controls.Add(std); 
             std.Show();

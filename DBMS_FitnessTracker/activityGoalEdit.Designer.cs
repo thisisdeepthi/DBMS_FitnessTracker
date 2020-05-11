@@ -1,6 +1,6 @@
 ﻿namespace DBMS_FitnessTracker
 {
-    partial class standard_diet_log
+    partial class activityGoatEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // standard_diet_log
+            // activityGoatEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,9 +74,9 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "standard_diet_log";
+            this.Name = "activityGoatEdit";
             this.Text = "set_goal";
-            this.Load += new System.EventHandler(this.standard_diet_log_Load);
+            this.Load += new System.EventHandler(this.activityGoatEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
