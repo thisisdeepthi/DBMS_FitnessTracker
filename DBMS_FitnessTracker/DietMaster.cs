@@ -15,15 +15,36 @@ namespace DBMS_FitnessTracker
     {
         public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection con1 = new MySqlConnection(constr);
-        public static string res;
+        public static string res="1";
         public DietMaster()
         {
             InitializeComponent();
-
+            FindDID();
         }
        
        
-       
+       public int FindDID()
+        {
+            string cmd = "select max(dietid)+1 as did from ft.DietMaster;";
+            MySqlCommand cmds = new MySqlCommand(cmd, con1);
+            MySqlDataReader reader;
+            try
+            {
+                con1.Open();
+                reader = cmds.ExecuteReader();
+
+                if(reader.Read() && !reader.IsDBNull(0))
+                {
+                    res = reader.GetInt16(0).ToString();
+                }
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            con1.Close();
+            return 0;
+        }
 
         private void DietMaster_Load(object sender, EventArgs e)
         {
@@ -55,6 +76,7 @@ namespace DBMS_FitnessTracker
 
         private void Save_Click_1(object sender, EventArgs e)
         {
+            FindDID();
             string JUNK = string.Empty;
             if (Yes.Checked && No.Checked)
                 MessageBox.Show("Select whether the food is junk or not! Enter one value please!");
@@ -69,9 +91,10 @@ namespace DBMS_FitnessTracker
             string pro = prot.ToString();
             string vitamin = vit.ToString();
             string fats = fat.ToString();
+            string others = other.ToString();
             //string others = textBox7.ToString();
 
-            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + car + "," + pro + "," + vitamin + "," + fats + "," + calories +  ",'" + JUNK + "');";
+            string Query = "insert into DietMaster(dietid,name,carbo,pro,vit,fat,caloriesperserving,others,junk) values(" + res + ",'" + Name + " '," + car + "," + pro + "," + vitamin + "," + fats + "," + calories + "," + others + ",' " + JUNK + " ');";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
 
             try
