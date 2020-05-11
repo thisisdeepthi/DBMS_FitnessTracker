@@ -50,8 +50,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.ADDNEW.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ADDNEW
@@ -67,7 +69,7 @@
             this.ADDNEW.Margin = new System.Windows.Forms.Padding(2);
             this.ADDNEW.Name = "ADDNEW";
             this.ADDNEW.Padding = new System.Windows.Forms.Padding(2);
-            this.ADDNEW.Size = new System.Drawing.Size(588, 532);
+            this.ADDNEW.Size = new System.Drawing.Size(588, 478);
             this.ADDNEW.TabIndex = 1;
             this.ADDNEW.TabStop = false;
             this.ADDNEW.Text = "ADD NEW";
@@ -103,7 +105,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(324, 307);
+            this.groupBox2.Size = new System.Drawing.Size(324, 285);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -276,14 +278,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Location = new System.Drawing.Point(638, 21);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(249, 520);
+            this.groupBox1.Size = new System.Drawing.Size(249, 466);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Existing";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(22, 73);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(210, 292);
+            this.listBox1.TabIndex = 0;
             // 
             // DietMaster
             // 
@@ -302,6 +314,7 @@
             this.ADDNEW.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -329,5 +342,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox other;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
