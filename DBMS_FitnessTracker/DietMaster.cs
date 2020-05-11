@@ -22,80 +22,8 @@ namespace DBMS_FitnessTracker
 
         }
        
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        } 
-
-        private void Save_Click(object sender, EventArgs e)
-        {
-            string JUNK = string.Empty;
-            if (YES.Checked && NO.Checked)
-                MessageBox.Show("Select whether the food is junk or not");
-            if (YES.Checked)
-                JUNK = "YES";
-            else if (NO.Checked)
-                JUNK = "NO";
-            else
-                MessageBox.Show("Select yes or no");
-            string label3 = textBox2.ToString();
-            string carbo = textBox3.ToString();
-            string pro = textBox4.ToString();
-            string vit = textBox5.ToString();
-            string fat = textBox6.ToString();
-            string others = textBox7.ToString();
-
-            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,caloriesperserving,others,junk)values(" + res + ",'" + Name + "'," + carbo + "," + pro + "," + vit + "," + fat + "," + label3 + "," + others + ",'" + JUNK + "');";
-            MySqlCommand cmd = new MySqlCommand(Query, con1);
-
-            try
-            {
-                con1.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Details saved successfully");
-                con1.Close();
-                this.Close();
-            }
-            catch(MySqlException er)
-            {
-                MessageBox.Show(er.Message);
-            }
-            catch(SystemException err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            con1.Close();
-        }
        
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void DietMaster_Load(object sender, EventArgs e)
         {
@@ -115,7 +43,7 @@ namespace DBMS_FitnessTracker
                 while (reader.Read())
                 {
                     string name = reader.GetString("DietName");
-                    textBox1.AppendText(name);
+                    DietName.AppendText(name);
                 }
             }
             catch (MySqlException er)
@@ -125,9 +53,47 @@ namespace DBMS_FitnessTracker
             con1.Close();
         }
 
-        private void ADDNEW_Enter(object sender, EventArgs e)
+        private void Save_Click_1(object sender, EventArgs e)
         {
+            string JUNK = string.Empty;
+            if (Yes.Checked && No.Checked)
+                MessageBox.Show("Select whether the food is junk or not! Enter one value please!");
+            if (Yes.Checked)
+                JUNK = "YES";
+            else if (No.Checked)
+                JUNK = "NO";
+            else
+                MessageBox.Show("Select yes or no");
+            string calories = cal.ToString();
+            string car = carbo.ToString();
+            string pro = prot.ToString();
+            string vitamin = vit.ToString();
+            string fats = fat.ToString();
+            //string others = textBox7.ToString();
+
+            string Query = "insert into DietMaster(name,carbo,pro,vit,fat,caloriesperserving,junk)values(" + res + ",'" + Name + "'," + car + "," + pro + "," + vitamin + "," + fats + "," + calories +  ",'" + JUNK + "');";
+            MySqlCommand cmd = new MySqlCommand(Query, con1);
+
+            try
+            {
+                con1.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Details saved successfully");
+                con1.Close();
+                this.Close();
+            }
+            catch (MySqlException er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            catch (SystemException err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            con1.Close();
 
         }
+
+       
     }
 }

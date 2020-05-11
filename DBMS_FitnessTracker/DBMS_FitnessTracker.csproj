@@ -68,6 +68,12 @@
     <Compile Include="ActLog.Designer.cs">
       <DependentUpon>ActLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="changepwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changepwd.Designer.cs">
+      <DependentUpon>changepwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="CumulativeReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="SetActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +122,11 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="standard diet log.cs">
+    <Compile Include="activityGoalEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="standard diet log.Designer.cs">
-      <DependentUpon>standard diet log.cs</DependentUpon>
+    <Compile Include="activityGoalEdit.Designer.cs">
+      <DependentUpon>activityGoalEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
@@ -132,33 +144,48 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ActivityMaster.resx">
       <DependentUpon>ActivityMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ActLog.resx">
       <DependentUpon>ActLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changepwd.resx">
+      <DependentUpon>changepwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CumulativeReport.resx">
       <DependentUpon>CumulativeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DietLog.resx">
       <DependentUpon>DietLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DietMaster.resx">
       <DependentUpon>DietMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DReport.resx">
       <DependentUpon>DReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SetActivity.resx">
       <DependentUpon>SetActivity.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="standard diet log.resx">
-      <DependentUpon>standard diet log.cs</DependentUpon>
+    <EmbeddedResource Include="activityGoalEdit.resx">
+      <DependentUpon>activityGoalEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
@@ -174,6 +201,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -190,6 +218,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

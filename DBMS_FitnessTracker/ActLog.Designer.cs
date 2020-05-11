@@ -51,9 +51,10 @@
             // 
             this.history.AutoSize = true;
             this.history.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history.Location = new System.Drawing.Point(9, 163);
+            this.history.Location = new System.Drawing.Point(14, 251);
+            this.history.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.history.Name = "history";
-            this.history.Size = new System.Drawing.Size(94, 19);
+            this.history.Size = new System.Drawing.Size(143, 26);
             this.history.TabIndex = 0;
             this.history.Text = "About Today";
             this.history.Click += new System.EventHandler(this.history_Click);
@@ -62,9 +63,10 @@
             // 
             this.actname.AutoSize = true;
             this.actname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actname.Location = new System.Drawing.Point(51, 33);
+            this.actname.Location = new System.Drawing.Point(76, 51);
+            this.actname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.actname.Name = "actname";
-            this.actname.Size = new System.Drawing.Size(90, 16);
+            this.actname.Size = new System.Drawing.Size(131, 25);
             this.actname.TabIndex = 3;
             this.actname.Text = "Activity Name";
             // 
@@ -72,9 +74,10 @@
             // 
             this.actdur.AutoSize = true;
             this.actdur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actdur.Location = new System.Drawing.Point(51, 79);
+            this.actdur.Location = new System.Drawing.Point(76, 122);
+            this.actdur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.actdur.Name = "actdur";
-            this.actdur.Size = new System.Drawing.Size(110, 16);
+            this.actdur.Size = new System.Drawing.Size(165, 25);
             this.actdur.TabIndex = 5;
             this.actdur.Text = "Duration (in mins)";
             // 
@@ -82,9 +85,10 @@
             // 
             this.actwork.AutoSize = true;
             this.actwork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actwork.Location = new System.Drawing.Point(51, 126);
+            this.actwork.Location = new System.Drawing.Point(76, 194);
+            this.actwork.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.actwork.Name = "actwork";
-            this.actwork.Size = new System.Drawing.Size(112, 16);
+            this.actwork.Size = new System.Drawing.Size(168, 25);
             this.actwork.TabIndex = 7;
             this.actwork.Text = "Workout  Intensity";
             // 
@@ -92,9 +96,10 @@
             // 
             this.workhigh.AutoSize = true;
             this.workhigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workhigh.Location = new System.Drawing.Point(206, 124);
+            this.workhigh.Location = new System.Drawing.Point(309, 191);
+            this.workhigh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.workhigh.Name = "workhigh";
-            this.workhigh.Size = new System.Drawing.Size(51, 19);
+            this.workhigh.Size = new System.Drawing.Size(72, 26);
             this.workhigh.TabIndex = 8;
             this.workhigh.TabStop = true;
             this.workhigh.Text = "High";
@@ -104,9 +109,10 @@
             // 
             this.worklow.AutoSize = true;
             this.worklow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.worklow.Location = new System.Drawing.Point(206, 162);
+            this.worklow.Location = new System.Drawing.Point(309, 249);
+            this.worklow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.worklow.Name = "worklow";
-            this.worklow.Size = new System.Drawing.Size(48, 19);
+            this.worklow.Size = new System.Drawing.Size(68, 26);
             this.worklow.TabIndex = 9;
             this.worklow.TabStop = true;
             this.worklow.Text = "Low";
@@ -116,17 +122,19 @@
             // 
             this.actrem.AutoSize = true;
             this.actrem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actrem.Location = new System.Drawing.Point(51, 196);
+            this.actrem.Location = new System.Drawing.Point(76, 302);
+            this.actrem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.actrem.Name = "actrem";
-            this.actrem.Size = new System.Drawing.Size(56, 16);
+            this.actrem.Size = new System.Drawing.Size(79, 25);
             this.actrem.TabIndex = 10;
             this.actrem.Text = "Remark";
             // 
             // actsub
             // 
-            this.actsub.Location = new System.Drawing.Point(71, 255);
+            this.actsub.Location = new System.Drawing.Point(106, 392);
+            this.actsub.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.actsub.Name = "actsub";
-            this.actsub.Size = new System.Drawing.Size(82, 36);
+            this.actsub.Size = new System.Drawing.Size(123, 55);
             this.actsub.TabIndex = 12;
             this.actsub.Text = "Submit";
             this.actsub.UseVisualStyleBackColor = true;
@@ -135,29 +143,31 @@
             // actiname
             // 
             this.actiname.FormattingEnabled = true;
-            this.actiname.Location = new System.Drawing.Point(206, 33);
+            this.actiname.Location = new System.Drawing.Point(309, 51);
+            this.actiname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.actiname.Name = "actiname";
-            this.actiname.Size = new System.Drawing.Size(121, 27);
+            this.actiname.Size = new System.Drawing.Size(180, 34);
             this.actiname.TabIndex = 13;
             this.actiname.SelectedIndexChanged += new System.EventHandler(this.FillCombo_SelectedIndexChanged);
             // 
             // actrem1
             // 
             this.actrem1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actrem1.Location = new System.Drawing.Point(206, 196);
+            this.actrem1.Location = new System.Drawing.Point(309, 302);
+            this.actrem1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.actrem1.Name = "actrem1";
-            this.actrem1.Size = new System.Drawing.Size(120, 21);
+            this.actrem1.Size = new System.Drawing.Size(178, 28);
             this.actrem1.TabIndex = 14;
-            this.actrem1.Text = "Say normal or unusual";
-            this.actrem1.TextChanged += new System.EventHandler(this.actrem1_TextChanged);
+            this.actrem1.Text = "Usual";
             // 
             // mustdo
             // 
             this.mustdo.AutoSize = true;
             this.mustdo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mustdo.Location = new System.Drawing.Point(9, 9);
+            this.mustdo.Location = new System.Drawing.Point(14, 14);
+            this.mustdo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mustdo.Name = "mustdo";
-            this.mustdo.Size = new System.Drawing.Size(75, 19);
+            this.mustdo.Size = new System.Drawing.Size(117, 26);
             this.mustdo.TabIndex = 15;
             this.mustdo.Text = "Your Goal";
             this.mustdo.Click += new System.EventHandler(this.mustdo_Click);
@@ -176,18 +186,21 @@
             this.addnew.Controls.Add(this.actrem);
             this.addnew.Controls.Add(this.actwork);
             this.addnew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addnew.Location = new System.Drawing.Point(338, 21);
+            this.addnew.Location = new System.Drawing.Point(507, 32);
+            this.addnew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addnew.Name = "addnew";
-            this.addnew.Size = new System.Drawing.Size(385, 323);
+            this.addnew.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addnew.Size = new System.Drawing.Size(578, 497);
             this.addnew.TabIndex = 16;
             this.addnew.TabStop = false;
             this.addnew.Text = "Add New";
             // 
             // finishbut
             // 
-            this.finishbut.Location = new System.Drawing.Point(225, 255);
+            this.finishbut.Location = new System.Drawing.Point(338, 392);
+            this.finishbut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.finishbut.Name = "finishbut";
-            this.finishbut.Size = new System.Drawing.Size(93, 36);
+            this.finishbut.Size = new System.Drawing.Size(140, 55);
             this.finishbut.TabIndex = 13;
             this.finishbut.Text = "Finish";
             this.finishbut.UseVisualStyleBackColor = true;
@@ -195,45 +208,45 @@
             // 
             // actdur1
             // 
-            this.actdur1.Location = new System.Drawing.Point(206, 76);
+            this.actdur1.Location = new System.Drawing.Point(309, 117);
+            this.actdur1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.actdur1.Name = "actdur1";
-            this.actdur1.Size = new System.Drawing.Size(100, 26);
+            this.actdur1.Size = new System.Drawing.Size(148, 35);
             this.actdur1.TabIndex = 0;
             // 
             // acthis
             // 
             this.acthis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.acthis.FormattingEnabled = true;
-            this.acthis.Location = new System.Drawing.Point(39, 200);
+            this.acthis.Location = new System.Drawing.Point(58, 308);
+            this.acthis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.acthis.Name = "acthis";
-            this.acthis.Size = new System.Drawing.Size(228, 154);
+            this.acthis.Size = new System.Drawing.Size(340, 229);
             this.acthis.TabIndex = 17;
-            this.acthis.SelectedIndexChanged += new System.EventHandler(this.acthis_SelectedIndexChanged);
             // 
             // goalsdo
             // 
             this.goalsdo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.goalsdo.FormattingEnabled = true;
-            this.goalsdo.ItemHeight = 15;
-            this.goalsdo.Location = new System.Drawing.Point(39, 54);
+            this.goalsdo.ItemHeight = 22;
+            this.goalsdo.Location = new System.Drawing.Point(58, 83);
+            this.goalsdo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.goalsdo.Name = "goalsdo";
-            this.goalsdo.Size = new System.Drawing.Size(228, 94);
+            this.goalsdo.Size = new System.Drawing.Size(340, 136);
             this.goalsdo.TabIndex = 20;
-            this.goalsdo.SelectedIndexChanged += new System.EventHandler(this.goalsdo_SelectedIndexChanged);
             // 
             // ActLog
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 377);
+            this.ClientSize = new System.Drawing.Size(1156, 580);
             this.Controls.Add(this.goalsdo);
             this.Controls.Add(this.acthis);
             this.Controls.Add(this.mustdo);
             this.Controls.Add(this.history);
             this.Controls.Add(this.addnew);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ActLog";
             this.Text = "ActLog";
             this.Load += new System.EventHandler(this.ActLog_Load);

@@ -218,19 +218,7 @@ namespace DBMS_FitnessTracker
             this.Close();
         }
 
-        private void acthis_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void goalsdo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void actrem1_TextChanged(object sender, EventArgs e)
-        {
-        }
 
         void ActDone()
         {
