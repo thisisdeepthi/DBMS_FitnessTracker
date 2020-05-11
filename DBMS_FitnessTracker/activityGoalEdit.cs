@@ -11,12 +11,12 @@ using MySql.Data.MySqlClient;
 
 namespace DBMS_FitnessTracker
 {
-    public partial class standard_diet_log : Form
+    public partial class activityGoatEdit : Form
     {
         int i = 1,uid=0;
         public static string constr1 = System.Configuration.ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
         MySqlConnection condatabase = new MySqlConnection(constr1);
-        public standard_diet_log()
+        public activityGoatEdit()
         {
             InitializeComponent();
             FindingUser();
@@ -73,7 +73,7 @@ namespace DBMS_FitnessTracker
             }            
             condatabase.Close();         
         }     
-        private void standard_diet_log_Load(object sender, EventArgs e)
+        private void activityGoatEdit_Load(object sender, EventArgs e)
         {
 
         }

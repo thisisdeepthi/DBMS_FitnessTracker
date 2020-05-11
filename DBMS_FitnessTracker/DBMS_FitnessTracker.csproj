@@ -122,11 +122,11 @@
     <Compile Include="Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="standard diet log.cs">
+    <Compile Include="activityGoalEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="standard diet log.Designer.cs">
-      <DependentUpon>standard diet log.cs</DependentUpon>
+    <Compile Include="activityGoalEdit.Designer.cs">
+      <DependentUpon>activityGoalEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPage.cs">
       <SubType>Form</SubType>
@@ -184,8 +184,8 @@
       <DependentUpon>SetActivity.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="standard diet log.resx">
-      <DependentUpon>standard diet log.cs</DependentUpon>
+    <EmbeddedResource Include="activityGoalEdit.resx">
+      <DependentUpon>activityGoalEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>

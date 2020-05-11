@@ -73,15 +73,13 @@ namespace DBMS_FitnessTracker
             condatabase.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void actsub_Click(object sender, EventArgs e)
         {
-            int logno=0,id=0,CaloriesBurnt=0;
-            string intensity=" ";
+            int  id = 0;
+            float CaloriesBurnt=0;
+            string intensity=" ",ActName="";
             //To insert the logno into the activitychart table
             condatabase.Open();
             string Query = "select max(LogNo)+1 as Log from activitychart;";
@@ -93,7 +91,7 @@ namespace DBMS_FitnessTracker
                 myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
-                    logno = myReader.GetInt32("Log");
+                    logno1 = myReader.GetInt32("Log");
                 }
                 
             }
@@ -114,6 +112,8 @@ namespace DBMS_FitnessTracker
                 while (myReader.Read())
                 {
                     id = myReader.GetInt32("ActivityID");
+                    CaloriesBurnt = myReader.GetFloat("CaloriesPerMin");
+                    ActName = myReader.GetString("ActivityName");
                 }
                // condatabase.Close();
             }
@@ -130,34 +130,16 @@ namespace DBMS_FitnessTracker
             else if (worklow.Checked)
                 intensity = worklow.Text;
             else
-                MessageBox.Show("Please Enter the Woerkout Intensity");
+                MessageBox.Show("Please Enter the Workout Intensity");
             //To calculate the Calories burnt
             string duration = "";
             duration=actdur1.Text;
             int x = Convert.ToInt32(duration);
             
+            
+            float temp = x * CaloriesBurnt;
             condatabase.Open();
-            Query = "select CaloriesPerMin from activitymaster where activityname='"+actname.Text+"';";
-            try
-            {
-                //condatabase.Open();
-                cmd = new MySqlCommand(Query, condatabase);
-                myReader = cmd.ExecuteReader();
-                while (myReader.Read())
-                {
-                    CaloriesBurnt =  myReader.GetInt32("CaloriesPerMin");
-                }
-                int temp = x * CaloriesBurnt;
-              // MessageBox.Show("Result is" + temp +" "+x +" "+CaloriesBurnt);
-                //condatabase.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            condatabase.Close();
-            condatabase.Open();
-            Query ="insert into activitychart(LogNo,Adate,AID,Duration,Type,CaloriesBurnt,UserID,Remark) values("+ logno + ",CURDATE(),"+id+","+x+",'"+intensity+"',"+CaloriesBurnt+","+uid+",'"+actrem1.Text+"');";
+            Query ="insert into activitychart(LogNo,Adate,AID,Duration,Type,CaloriesBurnt,UserID,Remark) values("+ logno1 + ",CURDATE(),"+id+","+x+",'"+intensity+"',"+temp+","+uid+",'"+actrem1.Text+"');";
             try
             {
                // condatabase.Open();
@@ -165,12 +147,14 @@ namespace DBMS_FitnessTracker
                 cmd.ExecuteNonQuery();
                 condatabase.Close();
                 ActDone();
+                Console.WriteLine(logno1);
                 MessageBox.Show("Saved Successfully");
-                //condatabase.Close();
+                
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                condatabase.Close();
             }
             
         }
@@ -193,44 +177,13 @@ namespace DBMS_FitnessTracker
             
             condatabase.Close();
         }
-        private void FillCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mustdo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dolist_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void history_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void finishbut_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void acthis_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void goalsdo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void actrem1_TextChanged(object sender, EventArgs e)
-        {
-        }
 
         void ActDone()
         {
