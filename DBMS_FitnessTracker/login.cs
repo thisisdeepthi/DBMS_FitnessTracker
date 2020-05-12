@@ -86,7 +86,7 @@ namespace DBMS_FitnessTracker
         {
             NewUser form = new NewUser();
             form.Show();
-            this.Close();
+            this.Hide();
         }
 
     }

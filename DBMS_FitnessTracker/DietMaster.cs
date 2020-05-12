@@ -126,8 +126,11 @@ namespace DBMS_FitnessTracker
                     MySqlCommand cmd = new MySqlCommand(Query, con1);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Details saved successfully");
+
+
                     listBox1.Items.Add(res + " . " + DietName.Text);
                     Resettingvalues();
+
 
 
                 }
