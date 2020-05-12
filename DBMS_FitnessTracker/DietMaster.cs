@@ -127,9 +127,8 @@ namespace DBMS_FitnessTracker
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Details saved successfully");
                     listBox1.Items.Add(res + " . " + DietName.Text);
-                    DietName.Text = ""; carbo.Text = ""; prot.Text = ""; vit.Text = ""; fat.Text = ""; cal.Text = ""; other.Text = "";
-                    Yes.Checked = false;
-                    No.Checked = false;
+                    Resettingvalues();
+
 
                 }
                 catch (MySqlException er)
@@ -141,6 +140,18 @@ namespace DBMS_FitnessTracker
                     MessageBox.Show(err.Message);
                 }
                 con1.Close();
+            }
+            void Resettingvalues()
+            {
+                DietName.Text = ""; 
+                carbo.Text = ""; 
+                prot.Text = ""; 
+                vit.Text = "";
+                fat.Text = "";
+                cal.Text = ""; 
+                other.Text = "";
+                Yes.Checked = false;
+                No.Checked = false;
             }
            
             
