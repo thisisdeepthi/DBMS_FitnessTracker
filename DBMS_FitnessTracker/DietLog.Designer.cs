@@ -58,7 +58,7 @@ namespace DBMS_FitnessTracker
             this.diettoday = new System.Windows.Forms.CheckedListBox();
             this.label12 = new System.Windows.Forms.Label();
 
-            this.diettoday = new System.Windows.Forms.CheckBox();
+            //this.diettoday = new System.Windows.Forms.CheckBox();
 
             ((System.ComponentModel.ISupportInitialize)(this.serving_no)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -402,7 +402,7 @@ namespace DBMS_FitnessTracker
             this.diettoday.Size = new System.Drawing.Size(97, 21);
             this.diettoday.TabIndex = 0;
             this.diettoday.Text = "diettoday";
-            this.diettoday.UseVisualStyleBackColor = true;
+            //this.diettoday.UseVisualStyleBackColor = true;
             // 
             // DietLog
             // 
