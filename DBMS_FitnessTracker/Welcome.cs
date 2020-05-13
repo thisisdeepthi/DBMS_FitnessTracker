@@ -123,5 +123,14 @@ namespace DBMS_FitnessTracker
             Form1.Show();
             this.Close();
         }
+
+        private void cumulativeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            CumulativeReport form1 = new CumulativeReport();
+            form1.TopLevel = false;
+            panel1.Controls.Add(form1);
+            form1.Show();
+        }
     }
 }
