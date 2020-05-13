@@ -30,7 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-           
             this.goalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activityGoalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dietGoalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,14 +74,14 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(130, 30);
             this.toolStripMenuItem1.Text = "User page";
-             
+            // 
             // goalsToolStripMenuItem
             // 
             this.goalsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.activityGoalsToolStripMenuItem,
             this.dietGoalsToolStripMenuItem});
             this.goalsToolStripMenuItem.Name = "goalsToolStripMenuItem";
-            this.goalsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.goalsToolStripMenuItem.Size = new System.Drawing.Size(172, 34);
             this.goalsToolStripMenuItem.Text = "Goals";
             // 
             // activityGoalsToolStripMenuItem
@@ -110,14 +109,14 @@
             // dietToolStripMenuItem
             // 
             this.dietToolStripMenuItem.Name = "dietToolStripMenuItem";
-            this.dietToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dietToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
             this.dietToolStripMenuItem.Text = "Diet ";
             this.dietToolStripMenuItem.Click += new System.EventHandler(this.dietToolStripMenuItem_Click_1);
             // 
             // activityToolStripMenuItem
             // 
             this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
-            this.activityToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.activityToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
             this.activityToolStripMenuItem.Text = "Activity";
             this.activityToolStripMenuItem.Click += new System.EventHandler(this.activityToolStripMenuItem_Click_1);
             // 
@@ -165,6 +164,7 @@
             this.cumulativeReportToolStripMenuItem.Name = "cumulativeReportToolStripMenuItem";
             this.cumulativeReportToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
             this.cumulativeReportToolStripMenuItem.Text = "Cumulative report ";
+            this.cumulativeReportToolStripMenuItem.Click += new System.EventHandler(this.cumulativeReportToolStripMenuItem_Click);
             // 
             // testToolStripMenuItem
             // 

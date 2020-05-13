@@ -202,15 +202,19 @@ namespace DBMS_FitnessTracker
                     {
                         //bad n lazy
                         l3.Text = "NOT achieved";
+                        l3.ForeColor = System.Drawing.Color.Red;
                     }
                     else if(diff >0)
                     {
                         //fitness freak
                         l3.Text = "Achieved more";
+                        l3.ForeColor = System.Drawing.Color.Green;
+
                     }
                     else
                     {
                         l3.Text = "OK";
+                        l3.ForeColor = System.Drawing.Color.Blue;
                         //Normal
                     }
 
