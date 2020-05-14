@@ -24,7 +24,9 @@ namespace DBMS_FitnessTracker
             fillcombo();
             FindingUser();
             dietintake();
+
             AlreadyTaken();
+
 
         }
 
@@ -72,6 +74,7 @@ namespace DBMS_FitnessTracker
             con1.Close();
 
         }
+
         void AlreadyTaken()
         {
             con1.Open();
@@ -103,16 +106,19 @@ namespace DBMS_FitnessTracker
             decimal carbo = 0, protein = 0, vitamin = 0, fat = 0, calories = 0;
             con1.Open();
             string junk;
+
             string Query = "select max(LogNo)+1 as Log from dietchart;";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
             MySqlDataReader myReader;
             try
             {
+
                 //condatabase.Open();
                 myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
                     logno1 = myReader.GetInt32("Log");
+
                 }
 
             }
@@ -145,8 +151,10 @@ namespace DBMS_FitnessTracker
 
 
 
+
             con1.Open();
             Query = "select * from dietmaster where dietname='" + diet.Text + "';";
+
 
 
             try
@@ -156,6 +164,7 @@ namespace DBMS_FitnessTracker
                 myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
+
                     carbo = myReader.GetDecimal("Carbo");
                     protein = myReader.GetDecimal("Protein");
                     vitamin = myReader.GetDecimal("Vitamin");
@@ -163,6 +172,7 @@ namespace DBMS_FitnessTracker
                     junk = myReader.GetString("isJunk");
                     calories = myReader.GetDecimal("CaloriesperS");
                 }
+
 
 
                 // MessageBox.Show("Result is" + temp +" "+x +" "+CaloriesBurnt);
@@ -176,20 +186,24 @@ namespace DBMS_FitnessTracker
             con1.Open();
             string serve = serving_no.Value.ToString();
             int x = Convert.ToInt32(serve);
+
             decimal c = x * carbo;
             decimal p = x * protein;
             decimal v = x * vitamin;
             decimal f = x * fat;
             // int j = x * junk;
             decimal ca = x * calories;
+
             carbo_in.Text = c.ToString();
             protein_in.Text = p.ToString();
             vitamin_in.Text = v.ToString();
             fat_in.Text = f.ToString();
             //junks.Text = j.ToString();
             cal_in.Text = ca.ToString();
+
             Query = "insert into dietchart(LogNo,dietDate, noOfServings,Userid,DietID,carbo,Protein,Vitamin,Fat,CaloriesIntake,Remark) values("
                                         + logno1 + ",CURDATE()," + x + "," + uid + ","+id+"," + c + "," + p + "," + v + "," + f + "," + ca + ",'" + remarks.Text + "');";
+
             try
             {
 
@@ -198,7 +212,9 @@ namespace DBMS_FitnessTracker
                 con1.Close();
                 //dietintake();
                 MessageBox.Show("Saved Successfully");
+
                 AlreadyTaken();
+
 
                 //condatabase.Close();
             }
@@ -206,6 +222,8 @@ namespace DBMS_FitnessTracker
             {
                 MessageBox.Show(ex.Message);
             }
+            con1.Close();
+
         }
 
         void dietintake()
@@ -240,6 +258,8 @@ namespace DBMS_FitnessTracker
     }
 
 
-   
+
 
 }
+
+

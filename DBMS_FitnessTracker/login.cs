@@ -51,7 +51,10 @@ namespace DBMS_FitnessTracker
                                 
                                 //logout.Enabled = true;
                                 this.Hide();
+
                                 Welcome form1 = new Welcome();
+                                form1.Closed += (s, args) => this.Close();
+
                                 form1.Show();
                             }
                         }
@@ -85,8 +88,9 @@ namespace DBMS_FitnessTracker
         private void button1_Click_1(object sender, EventArgs e)
         {
             NewUser form = new NewUser();
+            form.Closed += (s, args) => this.Close();
             form.Show();
-            this.Close();
+            this.Hide();
         }
 
     }

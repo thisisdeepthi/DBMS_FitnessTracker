@@ -40,7 +40,7 @@ namespace DBMS_FitnessTracker
             
         }
 
-        
+       
         private void dietChartToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -73,6 +73,7 @@ namespace DBMS_FitnessTracker
         {
             
         }
+       
 
         
         private void dietToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -122,6 +123,15 @@ namespace DBMS_FitnessTracker
             changepwd Form1 = new changepwd ();
             Form1.Show();
             this.Close();
+        }
+
+        private void cumulativeReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            CumulativeReport form1 = new CumulativeReport();
+            form1.TopLevel = false;
+            panel1.Controls.Add(form1);
+            form1.Show();
         }
     }
 }
