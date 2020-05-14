@@ -174,11 +174,11 @@ namespace DBMS_FitnessTracker
                             male.Checked = true;
                         else
                             female.Checked = true;
-                        temp = dr.GetString(0);
-                        //MessageBox.Show(temp);
-                        DateTime test= DateTime.ParseExact(temp, "dd-MM-yyyy hh:mm:ss", CultureInfo.InvariantCulture);
+                        DateTime tempo = dr.GetDateTime(0);
+                       // MessageBox.Show(tempo.ToString());
+                       // DateTime test= DateTime.ParseExact(temp, "dd-MM-yyyy hh:mm:ss", CultureInfo.InvariantCulture);
                         //MessageBox.Show(test.ToString());
-                        agebox.Value = test;
+                       agebox.Value = tempo;
                         name.Text = Program.userName;
                         Save.Enabled = false;
 

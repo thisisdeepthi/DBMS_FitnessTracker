@@ -82,7 +82,7 @@ namespace DBMS_FitnessTracker
             
             try
             {
-                string query = "select calorieIntake from user where userid=" + userid;
+                string query = "select GoalCalorieIntake  from user where userid=" + userid;
                 MySqlCommand cmd = new MySqlCommand(query, con1);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while(dr.Read())
@@ -104,8 +104,20 @@ namespace DBMS_FitnessTracker
             chart1.Series[0].Points.AddXY("Fat", f);
             chart1.Series[0].Points.AddXY("Others", o);
             progressBar1.Maximum = Convert.ToInt32(goals);
-            progressBar1.Value = Convert.ToInt32(calToday);
+           
+                int calDis = Convert.ToInt32(calToday);
             DESC.Text = "Consumed " + calToday.ToString() + " out of " + goals.ToString();
+            if (calDis>progressBar1.Maximum)
+            {
+                progressBar1.Value = progressBar1.Maximum;
+                MessageBox.Show("You Have EATEN EXCESS! ", "More cal today", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DESC.Text += "You have EATEN EXCESS";
+            }
+            else
+            {
+                progressBar1.Value = calDis;
+            }
+            
            
         }
         void GenerateGrid1()
