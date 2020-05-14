@@ -40,7 +40,7 @@ namespace DBMS_FitnessTracker
             
         }
 
-        
+       
         private void dietChartToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -73,6 +73,7 @@ namespace DBMS_FitnessTracker
         {
             
         }
+       
 
         
         private void dietToolStripMenuItem_Click_1(object sender, EventArgs e)
