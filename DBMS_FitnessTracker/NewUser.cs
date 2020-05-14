@@ -41,7 +41,7 @@ namespace DBMS_FitnessTracker
 
                 Form1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
                 Form1.Show();
-                this.Close();
+                this.Hide();
                 
             }
 
