@@ -222,6 +222,7 @@ namespace DBMS_FitnessTracker
             {
                 MessageBox.Show(ex.Message);
             }
+            con1.Close();
 
         }
 

@@ -96,8 +96,8 @@ namespace DBMS_FitnessTracker
                 MessageBox.Show(es.Message, "Error in DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             con1.Close();
-            chart1.Series[0].IsValueShownAsLabel = true;
-            chart1.Series[0].IsXValueIndexed = true;
+            chart1.Series[0].IsValueShownAsLabel = false;
+            //chart1.Series[0].IsXValueIndexed = true;
             chart1.Series[0].Points.AddXY("Carbo", c);
             chart1.Series[0].Points.AddXY("Protein", p);
             chart1.Series[0].Points.AddXY("Vit", v);

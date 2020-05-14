@@ -47,14 +47,14 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.DESC = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.DESC = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.low)).BeginInit();
@@ -65,8 +65,8 @@
             this.tabPage2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -250,6 +250,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Junk List";
             // 
+            // listBox1
+            // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(51, 34);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(241, 120);
+            this.listBox1.TabIndex = 0;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.chart1);
@@ -259,6 +269,26 @@
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Diet Nutrients Graph";
+            // 
+            // chart1
+            // 
+            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(21, 73);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.CustomProperties = "CollectedSliceExploded=True, PieLabelStyle=Disabled";
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(484, 339);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // groupBox4
             // 
@@ -272,13 +302,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CalorieGoal";
             // 
-            // progressBar1
+            // DESC
             // 
-            this.progressBar1.Location = new System.Drawing.Point(54, 109);
-            this.progressBar1.MarqueeAnimationSpeed = 40;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(187, 23);
-            this.progressBar1.TabIndex = 0;
+            this.DESC.AutoSize = true;
+            this.DESC.Location = new System.Drawing.Point(62, 165);
+            this.DESC.Name = "DESC";
+            this.DESC.Size = new System.Drawing.Size(51, 20);
+            this.DESC.TabIndex = 2;
+            this.DESC.Text = "label6";
             // 
             // label5
             // 
@@ -289,42 +320,13 @@
             this.label5.Text = "Calories Goal till now";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // chart1
+            // progressBar1
             // 
-            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(21, 73);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(484, 339);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // DESC
-            // 
-            this.DESC.AutoSize = true;
-            this.DESC.Location = new System.Drawing.Point(62, 165);
-            this.DESC.Name = "DESC";
-            this.DESC.Size = new System.Drawing.Size(51, 20);
-            this.DESC.TabIndex = 2;
-            this.DESC.Text = "label6";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(51, 34);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 120);
-            this.listBox1.TabIndex = 0;
+            this.progressBar1.Location = new System.Drawing.Point(54, 109);
+            this.progressBar1.MarqueeAnimationSpeed = 40;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(187, 23);
+            this.progressBar1.TabIndex = 0;
             // 
             // DReport
             // 
@@ -346,9 +348,9 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
