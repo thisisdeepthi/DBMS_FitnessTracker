@@ -68,7 +68,7 @@ namespace DBMS_FitnessTracker
             string height = ht.Value.ToString();
             string weight = wt.Value.ToString();
             
-            string Query = "insert into user (userid,name,password,dob,gender,phoneNo,email,height,weight,category) values ("+res+",'" + name.Text + "','"+NewUser.password+"','" + dob + "','" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"');";
+            string Query = "insert into user (userid,name,password,dob,gender,phoneNo,email,height,weight,category,GoalCalorieIntake) values (" + res+",'" + name.Text + "','"+NewUser.password+"','" + dob + "','" + gender + "','" + phone.Text + "','" + email.Text + "'," + height + "," + weight +",'"+ category.SelectedItem.ToString()+"',0);";
             MySqlCommand cmd = new MySqlCommand(Query, con1);
 
 

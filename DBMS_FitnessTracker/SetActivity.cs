@@ -22,6 +22,7 @@ namespace DBMS_FitnessTracker
             FindingUser();
             goalselected(0);
             selectact();
+            GoalDiet();
         }
         void goalselected(int i)
         {
@@ -88,6 +89,40 @@ namespace DBMS_FitnessTracker
                 actname.Items.Add(sName);
             }
             condatabase.Close();
+        }
+        void GoalDiet()
+        {
+            condatabase.Open();
+            decimal gl=0; 
+            string Query = "select * from user where Userid=" + uid + ";";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while(myReader.Read())
+                {
+                     gl = myReader.GetDecimal("GoalCalorieIntake");
+                }
+                //string glS = Convert.ToString(gl);
+                if(gl==0)
+                {
+                    AddDiet.Text = "ADD";
+                }
+                else
+                {
+                    DietGoal.Text = Convert.ToString(gl);
+                    AddDiet.Text = "EDIT";
+                    AddDietGoal.Text = "Calories To Be Taken-" + gl;
+                    //SetUrGoal.Items.Add("Calories To Be Taken-"+gl);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            condatabase.Close();
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -184,6 +219,32 @@ namespace DBMS_FitnessTracker
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddDiet_Click(object sender, EventArgs e)
+        {
+            string goal = DietGoal.Text;
+            int gl = Convert.ToInt32(goal);
+            string Query = " update user set GoalCalorieIntake="+gl+" where Userid="+uid+";";
+            try
+            {
+                condatabase.Open();
+                MySqlCommand cmd = new MySqlCommand(Query, condatabase);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Added successfully");
+                AddDiet.Enabled = false;
+                condatabase.Close();
+                GoalDiet();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DietGoal_TextChanged(object sender, EventArgs e)
+        {
+            AddDiet.Enabled = true;
         }
 
         private void actdur_TextChanged(object sender, EventArgs e)
