@@ -50,13 +50,9 @@ namespace DBMS_FitnessTracker
             dietlog.Show();
         }
 
-        private void activityGoalsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GoalsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
-            SetActivity set1 = new SetActivity();
-            set1.TopLevel = false;
-            panel1.Controls.Add(set1);
-            set1.Show();
+            
         }
 
         private void activityToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -132,6 +128,15 @@ namespace DBMS_FitnessTracker
             form1.TopLevel = false;
             panel1.Controls.Add(form1);
             form1.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            SetActivity set1 = new SetActivity();
+            set1.TopLevel = false;
+            panel1.Controls.Add(set1);
+            set1.Show();
         }
     }
 }
