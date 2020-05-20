@@ -164,6 +164,11 @@ namespace DBMS_FitnessTracker
             FillDiet();
         }
 
+        private void CumulativeReport_Load(object sender, EventArgs e)
+        {
+
+        }
+
         void FillDurGraph(string year, string month)
         {
             chart1.Series[0].IsXValueIndexed = false;

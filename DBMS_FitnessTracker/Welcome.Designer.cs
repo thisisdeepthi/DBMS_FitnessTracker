@@ -173,7 +173,7 @@
             this.editProfileToolStripMenuItem,
             this.changePasswordToolStripMenuItem,
             this.logoutToolStripMenuItem});
-            this.testToolStripMenuItem.Image = global::DBMS_FitnessTracker.Properties.Resources.profile;
+            this.testToolStripMenuItem.Image = global::DBMS_FitnessTracker.Properties.Resources.profile1;
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
             this.testToolStripMenuItem.Size = new System.Drawing.Size(40, 30);
             this.testToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopRight;

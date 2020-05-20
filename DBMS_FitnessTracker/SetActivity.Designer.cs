@@ -38,7 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SetUrGoal = new System.Windows.Forms.CheckedListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AddDiet = new System.Windows.Forms.Button();
+            this.DietGoal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.AddDietGoal = new System.Windows.Forms.RichTextBox();
             this.setacti.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -54,7 +61,7 @@
             // actname
             // 
             this.actname.FormattingEnabled = true;
-            this.actname.Location = new System.Drawing.Point(143, 62);
+            this.actname.Location = new System.Drawing.Point(122, 63);
             this.actname.Name = "actname";
             this.actname.Size = new System.Drawing.Size(121, 27);
             this.actname.TabIndex = 16;
@@ -72,7 +79,7 @@
             // 
             // actdur
             // 
-            this.actdur.Location = new System.Drawing.Point(143, 134);
+            this.actdur.Location = new System.Drawing.Point(122, 135);
             this.actdur.Name = "actdur";
             this.actdur.Size = new System.Drawing.Size(100, 26);
             this.actdur.TabIndex = 21;
@@ -88,7 +95,7 @@
             this.setacti.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setacti.Location = new System.Drawing.Point(15, 31);
             this.setacti.Name = "setacti";
-            this.setacti.Size = new System.Drawing.Size(321, 275);
+            this.setacti.Size = new System.Drawing.Size(272, 274);
             this.setacti.TabIndex = 22;
             this.setacti.TabStop = false;
             this.setacti.Text = "Add activity to your Goal";
@@ -107,11 +114,11 @@
             // 
             this.goal.AutoSize = true;
             this.goal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goal.Location = new System.Drawing.Point(383, 43);
+            this.goal.Location = new System.Drawing.Point(523, 31);
             this.goal.Name = "goal";
-            this.goal.Size = new System.Drawing.Size(154, 19);
+            this.goal.Size = new System.Drawing.Size(231, 19);
             this.goal.TabIndex = 23;
-            this.goal.Text = "YOUR DAILY GOAL";
+            this.goal.Text = "YOUR DAILY ACTIVITY GOAL";
             // 
             // label3
             // 
@@ -140,17 +147,79 @@
             // 
             this.SetUrGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SetUrGoal.FormattingEnabled = true;
-            this.SetUrGoal.Location = new System.Drawing.Point(387, 77);
+            this.SetUrGoal.Location = new System.Drawing.Point(527, 58);
             this.SetUrGoal.Name = "SetUrGoal";
-            this.SetUrGoal.Size = new System.Drawing.Size(308, 229);
+            this.SetUrGoal.Size = new System.Drawing.Size(232, 137);
             this.SetUrGoal.TabIndex = 27;
             this.SetUrGoal.SelectedIndexChanged += new System.EventHandler(this.SetUrGoal_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.AddDiet);
+            this.groupBox1.Controls.Add(this.DietGoal);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(306, 52);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(201, 196);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Diet Goal";
+            // 
+            // AddDiet
+            // 
+            this.AddDiet.Location = new System.Drawing.Point(55, 124);
+            this.AddDiet.Name = "AddDiet";
+            this.AddDiet.Size = new System.Drawing.Size(84, 39);
+            this.AddDiet.TabIndex = 2;
+            this.AddDiet.Text = "ADD";
+            this.AddDiet.UseVisualStyleBackColor = true;
+            this.AddDiet.Click += new System.EventHandler(this.AddDiet_Click);
+            // 
+            // DietGoal
+            // 
+            this.DietGoal.Location = new System.Drawing.Point(46, 71);
+            this.DietGoal.Name = "DietGoal";
+            this.DietGoal.Size = new System.Drawing.Size(100, 26);
+            this.DietGoal.TabIndex = 1;
+            this.DietGoal.TextChanged += new System.EventHandler(this.DietGoal_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label1.Location = new System.Drawing.Point(17, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Calories To Be Taken";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(523, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(196, 19);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "YOUR DAILY DIET GOAL";
+            // 
+            // AddDietGoal
+            // 
+            this.AddDietGoal.Location = new System.Drawing.Point(527, 258);
+            this.AddDietGoal.Name = "AddDietGoal";
+            this.AddDietGoal.Size = new System.Drawing.Size(227, 100);
+            this.AddDietGoal.TabIndex = 30;
+            this.AddDietGoal.Text = "";
             // 
             // SetActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 377);
+            this.Controls.Add(this.AddDietGoal);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SetUrGoal);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
@@ -162,6 +231,8 @@
             this.Load += new System.EventHandler(this.SetActivity_Load);
             this.setacti.ResumeLayout(false);
             this.setacti.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +250,11 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.CheckedListBox SetUrGoal;
         private System.Windows.Forms.Button addact;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button AddDiet;
+        private System.Windows.Forms.TextBox DietGoal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox AddDietGoal;
     }
 }
