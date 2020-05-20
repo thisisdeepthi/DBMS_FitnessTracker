@@ -116,9 +116,9 @@ namespace DBMS_FitnessTracker
                     if (Yes.Checked && No.Checked)
                         MessageBox.Show("Select whether the food is junk or not! Enter one value please!");
                     if (Yes.Checked)
-                        JUNK = "YES";
+                        JUNK = "Yes";
                     else if (No.Checked)
-                        JUNK = "NO";
+                        JUNK = "No";
                     else
                         MessageBox.Show("Select yes or no");
                     con1.Open();
