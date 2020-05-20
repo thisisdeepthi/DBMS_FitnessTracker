@@ -223,11 +223,12 @@ namespace DBMS_FitnessTracker
 
         private void AddDiet_Click(object sender, EventArgs e)
         {
-            string goal = DietGoal.Text;
-            int gl = Convert.ToInt32(goal);
-            string Query = " update user set GoalCalorieIntake="+gl+" where Userid="+uid+";";
+           
             try
             {
+                string goal = DietGoal.Text;
+                int gl = Convert.ToInt32(goal);
+                string Query = " update user set GoalCalorieIntake=" + gl + " where Userid=" + uid + ";";
                 condatabase.Open();
                 MySqlCommand cmd = new MySqlCommand(Query, condatabase);
                 cmd.ExecuteNonQuery();

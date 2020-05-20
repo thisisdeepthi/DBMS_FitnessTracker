@@ -64,7 +64,11 @@ namespace DBMS_FitnessTracker
                 gender = "Female";
             else
                 MessageBox.Show("Please select a gender:");
-            
+            if (!email_Text())
+                return;
+            if (!phone_Text())
+                return;
+
             string height = ht.Value.ToString();
             string weight = wt.Value.ToString();
             
@@ -77,7 +81,7 @@ namespace DBMS_FitnessTracker
                 
                 con1.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Saved Successfully! Now you re ready to rock!! Please go set the goals ! You can check if our advised goals are sufficient ");
+                MessageBox.Show("Saved Successfully! Now you re ready to rock!! Please go set the goals ! You can check if our advised goals are sufficient ","Getting Ready",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 Welcome newPage = new Welcome();
                 newPage.Show();
                 this.Close();
@@ -99,6 +103,44 @@ namespace DBMS_FitnessTracker
 
         }
 
+        private bool phone_Text()
+        {
+             foreach (char a in phone.Text)
+            {
+                if(!(a>='0' && a<='9' || a=='+'))
+                {
+                    MessageBox.Show("Enter a valid phone number!", "Phone number validation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    return false;
+                }
+                
+
+            }
+
+            
+            if (phone.TextLength < 10)
+            {
+                MessageBox.Show("Enter a valid phone number!", "Phone number validation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                return false;
+            }
+               
+            else
+                return true;
+          
+        }
+
+        private bool email_Text()
+        {
+            //char[] test = { '@', '.' };
+            if (email.Text.IndexOf('@') == -1)
+                MessageBox.Show("Enter a valid Email address!", "Email validation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            else if (email.Text.IndexOf('.') == -1)
+                MessageBox.Show("Enter a valid Email address!", "Email validation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            else
+            return true;
+            return false;
+
+        }
+
         private void Updatenew_Click(object sender, EventArgs e)
         {
             dob = agebox.Value.ToString("yyyy-MM-dd");
@@ -112,6 +154,10 @@ namespace DBMS_FitnessTracker
                 gender = "Female";
             else
                 MessageBox.Show("Please select a gender:");
+            if (!email_Text())
+                return;
+            if (!phone_Text())
+                return;
 
             string height = ht.Value.ToString();
             string weight = wt.Value.ToString();
@@ -125,7 +171,7 @@ namespace DBMS_FitnessTracker
 
                 con1.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Updated Successfully");
                 con1.Close();
                 //  this.Close();
 
@@ -155,8 +201,10 @@ namespace DBMS_FitnessTracker
            // findUID();
             string q = "Select dob,gender,height,weight,category,phoneNo,email,userid from user where name='" + Program.userName + "';";
             MySqlCommand cmd = new MySqlCommand(q, con1);
-            if(Program.userName!="")
+            name.Text = Program.userName;
+            if (Program.userName!="")
             {
+
                 try
                 {
                     con1.Open();
@@ -181,6 +229,7 @@ namespace DBMS_FitnessTracker
                        agebox.Value = tempo;
                         name.Text = Program.userName;
                         Save.Enabled = false;
+                        Save.Visible = false;
 
                     }
                 }
@@ -189,8 +238,9 @@ namespace DBMS_FitnessTracker
                 con1.Close();
             }
             else
-            { name.Text = NewUser.username;
+            {
                 Updatenew.Enabled = false;
+                Updatenew.Visible = false;
             }
         }
 

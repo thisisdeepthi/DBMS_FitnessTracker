@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.createAccnt = new System.Windows.Forms.Button();
             this.newPwd = new System.Windows.Forms.TextBox();
             this.pwd = new System.Windows.Forms.TextBox();
@@ -38,12 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.createAccnt);
             this.groupBox1.Controls.Add(this.newPwd);
@@ -54,10 +56,20 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(30, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(444, 336);
+            this.groupBox1.Size = new System.Drawing.Size(444, 444);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account Details";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(118, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(198, 35);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Go back to login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // createAccnt
             // 
@@ -67,7 +79,7 @@
             this.createAccnt.TabIndex = 6;
             this.createAccnt.Text = "Create Account";
             this.createAccnt.UseVisualStyleBackColor = true;
-            this.createAccnt.Click += new System.EventHandler(this.createAccnt_Click);
+            this.createAccnt.Click += new System.EventHandler(this.CreateAccnt_Click1);
             // 
             // newPwd
             // 
@@ -107,9 +119,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
+            this.label2.Text = "Password***";
             // 
             // label1
             // 
@@ -120,21 +132,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter user name";
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(118, 276);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Go back to login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.Location = new System.Drawing.Point(6, 384);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(438, 57);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "***Password must contain minimum of one number, special character and uppercase l" +
+    "etter";
             // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 398);
+            this.ClientSize = new System.Drawing.Size(552, 522);
             this.Controls.Add(this.groupBox1);
             this.Name = "NewUser";
             this.Text = "NewUser";
@@ -156,5 +167,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }
