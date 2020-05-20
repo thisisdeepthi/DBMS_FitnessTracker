@@ -209,7 +209,7 @@ namespace DBMS_FitnessTracker
                 {
                     con1.Open();
                     MySqlDataReader dr = cmd.ExecuteReader();
-                    while(dr.Read())
+                    if(dr.Read())
                     {
                         cur = dr.GetString(7);
                         phone.Text = dr.GetString(5);
@@ -232,16 +232,17 @@ namespace DBMS_FitnessTracker
                         Save.Visible = false;
 
                     }
+                    else
+                    {
+                        Updatenew.Enabled = false;
+                        Updatenew.Visible = false;
+                    }
                 }
                 catch(MySqlException er)
                 { MessageBox.Show(er.Message); }
                 con1.Close();
             }
-            else
-            {
-                Updatenew.Enabled = false;
-                Updatenew.Visible = false;
-            }
+           
         }
 
         
