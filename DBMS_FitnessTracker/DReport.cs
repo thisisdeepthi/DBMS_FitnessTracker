@@ -54,6 +54,12 @@ namespace DBMS_FitnessTracker
             }
             con1.Close();
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         void GeneratePie()
         {
             chart1.Titles.Add("Nutrient Proportion");
